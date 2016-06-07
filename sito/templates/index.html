@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en-US">
-    <head>
+    <head>{% load staticfiles %}
         <title>PORTFOLIO BRICK GREY | Aside Responsive HTML Theme</title>
         <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 
@@ -9,21 +9,21 @@
 
         <!-- Favicons -->
         <link rel="shortcut icon" href="./img/favicon.ico">
-        <link rel="apple-touch-icon-precomposed" href="./img/favicon.ico">
+        <link rel="apple-touch-icon-precomposed" href="{% static 'img/favicon.ico' %}">
 
         <!-- Google fonts styles -->
         <link rel="stylesheet" id="google-fonts-Roboto-css" href="http://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C700%2C700italic%2C900%2C900italic&amp;ver=3.9.1" type="text/css" media="all">
         <link rel="stylesheet" id="google-fonts-Playfair+Display-css" href="http://fonts.googleapis.com/css?family=Playfair+Display%3Aregular%2Citalic%2C700%2C700italic%2C900%2C900italic&amp;ver=3.9.1" type="text/css" media="all">
 
         <!-- Aside styles -->
-        <link rel="stylesheet" id="bootstrap-css" href="./styles/bootstrap.css" type="text/css" media="screen">
-        <link rel="stylesheet" id="font-awesome-css" href="./styles/font-awesome.min.css" type="text/css" media="screen">
-        <link rel="stylesheet" id="pagebuild-css" href="./styles/pagebuild.css" type="text/css" media="screen">
-        <link rel="stylesheet" id="ux-aside-css" href="./styles/style.css" type="text/css" media="screen">
-        <link rel="stylesheet" id="icons-css" href="./styles/icons.css" type="text/css" media="screen">
+        <link rel="stylesheet" id="bootstrap-css" href="{% static 'styles/bootstrap.css' %}" type="text/css" media="screen">
+        <link rel="stylesheet" id="font-awesome-css" href="{% static 'styles/font-awesome.min.css' %}" type="text/css" media="screen">
+        <link rel="stylesheet" id="pagebuild-css" href="{% static 'styles/pagebuild.css' %}" type="text/css" media="screen">
+        <link rel="stylesheet" id="ux-aside-css" href="{% static 'styles/style.css' %}" type="text/css" media="screen">
+        <link rel="stylesheet" id="icons-css" href="{% static 'styles/icons.css' %}" type="text/css" media="screen">
 
         <!-- Jquery Lib version 1.11.0 -->
-        <script type="text/javascript" src="./js/jquery.min.js"></script>
+        <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
 
         <!-- IE hack -->
         <!--[if lte IE 9]>
@@ -76,7 +76,7 @@
             </div>
 
             <div class="mobile-meta-con">
-                <div class="copyright">Copyright uiueux.com</div>
+                <div class="copyright"></div>
             </div>
             <!--End header-info-mobile-->
 
@@ -100,43 +100,15 @@
                             <ul class="menu">
                                 <li id="menu-item-885" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-122 current_page_item menu-item-has-children">
                                     <a>HOME</a>
-                                    <ul class="sub-menu">
-                                        <li id="menu-item-896" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="index-mixed.html">MIXED</a></li>
-                                        <li id="menu-item-895" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="index-fullscreen-slide.html">FULLSCREEN SLIDE</a></li>
-                                    </ul>
                                 </li>
-                                <li id="menu-item-883" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children current-menu-item">
+                                <li id="menu-item-885" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-122 current_page_item menu-item-has-children">
+                                    <a>CHI SONO</a>
+                                </li>
+                                <li id="menu-item-885" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-122 current_page_item menu-item-has-children">
                                     <a>PORTFOLIO</a>
-                                    <ul class="sub-menu">
-                                        <li id="menu-item-889" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="portfolio-interblock.html">INTERLOCK PORTFOLIO</a></li>
-                                        <li id="menu-item-884" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="portfolio-grid-ajax.html">GRID AJAX PORTFOLIO</a></li>
-                                        <li id="menu-item-894" class="menu-item menu-item-type-post_type menu-item-object-page current-menu-item"><a href="portfolio-brick-grey.html">BRICK GREY</a></li>
-                                        <li id="menu-item-928" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="portfolio-with-filter.html">PORTFOLIO WITH FILTER</a></li>
-                                    </ul>
                                 </li>
-                                <li id="menu-item-887" class="menu-item menu-item-type-post_type menu-item-object-page menu-item-has-children">
-                                    <a href="blog-standard.html">BLOG</a>
-                                    <ul class="sub-menu">
-                                        <li id="menu-item-886" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="blog-masonry.html">MASONRY BLOG</a></li>
-                                    </ul>
-                                </li>
-                                <li id="menu-item-935" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-935">
-                                    <a>PAGES</a>
-                                    <ul class="sub-menu">
-                                       <li id="menu-item-955" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="page-coming-soon.html">COMING SOON</a></li>
-                                        <li id="menu-item-942" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="page-about-us.html">ABOUT US</a></li>
-                                        <li id="menu-item-888" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="page-about-me.html">ABOUT ME</a></li>
-                                        <li id="menu-item-934" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="page-jobs.html">JOBS</a></li>
-                                    </ul>
-                                </li>
-                                <li id="menu-item-882" class="menu-item menu-item-type-custom menu-item-object-custom menu-item-has-children menu-item-882">
-                                    <a>ELEMENTS</a>
-                                    <ul class="sub-menu">
-                                        <li id="menu-item-893" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="elements-typography.html">TYPOGRAPHY</a></li>
-                                        <li id="menu-item-892" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="elements-infographic.html">INFOGRAPHIC</a></li>
-                                        <li id="menu-item-891" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="elements-imagebox.html">IMAGE BOX</a></li>
-                                        <li id="menu-item-890" class="menu-item menu-item-type-post_type menu-item-object-page"><a href="elements-controls.html">CONTROLS</a></li>
-                                    </ul>
+                                <li id="menu-item-885" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-122 current_page_item menu-item-has-children">
+                                    <a>CONTATTI</a>
                                 </li>
                             </ul>
                         </div>
@@ -189,18 +161,11 @@
                                                                             <li class="active">
                                                                                 <a href="#" data-filter="*">All</a>
                                                                             </li>
+                                                                            {% for cat in categorie_list %}
                                                                             <li>
-                                                                                <a data-filter=".filter_architecture" href="#">ARCHITECTURE</a>
+                                                                                <a data-filter=".{{cat.titolo}}" href="#">{{cat.titolo}}</a>
                                                                             </li>
-                                                                            <li>
-                                                                                <a data-filter=".filter_branding" href="#">BRANDING</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a data-filter=".filter_illustration" href="#">ILLUSTRATION</a>
-                                                                            </li>
-                                                                            <li>
-                                                                                <a data-filter=".filter_photography-2" href="#">PHOTOGRAPHY</a>
-                                                                            </li>
+                                                                            {% endfor %}
                                                                         </ul>
                                                                         <div class="filter-floating-triggle hidden-phone">
                                                                             <i class="fa fa-filter"></i>
@@ -219,6 +184,34 @@
                                                                             </div>
                                                                         </div>
                                                                         <div class="isotope masonry  isotope_fade" data-space="1px" data-size="brick">
+
+                                                                            {% for post in post_list %}
+                                                                            <div class="{{post.categoria.titolo}} filter_blog filter_portfolio {{post.mystyle}} isotope-item  brick-with-img">
+                                                                                <div class="inside brick-inside post-bgcolor-default">
+                                                                                    <a href="{% url 'dettaglio' post.id %}" title="PORTFOLIO POST INFO LEFT" class="brick-link brick-link-gray">
+                                                                                    <div class="brick-hover-mask brick-hover">
+                                                                                        <h3 class="brick-title">{{post.titolo}}</h3>
+                                                                                    </div>
+                                                                                    <div class="brick-content brick-grey">{% load cropping %}
+                                                                                        {% if impaginazione == 'width-and-small' %}
+                                                                                        <img src="{% cropped_thumbnail post "thumb" %}" class="grayscale wp-post-image" alt="IMG_4783"><div class="brick-conteng-bg"></div>
+                                                                                        {% elif impaginazione == 'width-and-height' %}
+                                                                                        <img src="{% cropped_thumbnail post "thumb_due" %}" class="grayscale wp-post-image" alt="IMG_4783"><div class="brick-conteng-bg"></div>
+                                                                                        {% elif impaginazione == 'width-and-long' %}
+                                                                                        <img src="{% cropped_thumbnail post "thumb_tre" %}" class="grayscale wp-post-image" alt="IMG_4783"><div class="brick-conteng-bg"></div>
+                                                                                        {% elif impaginazione == 'width-and-big' %}
+                                                                                        <img src="{% cropped_thumbnail post "thumb_quattro" %}" class="grayscale wp-post-image" alt="IMG_4783"><div class="brick-conteng-bg"></div>
+                                                                                        {% else %}
+                                                                                         <img src="{% cropped_thumbnail post "thumb" %}" class="grayscale wp-post-image" alt="IMG_4783"><div class="brick-conteng-bg"></div>
+                                                                                        {% endif %}
+                                                                                    </div> </a>
+                                                                                </div><!--End inside-->
+                                                                            </div>
+                                                                            {% endfor %}
+
+
+
+
                                                                             <div class="filter_architecture filter_blog filter_portfolio width-and-small isotope-item  brick-with-img">
                                                                                 <div class="inside brick-inside post-bgcolor-default">
                                                                                     <a href="content-portfolio-images-on-right.html" title="PORTFOLIO POST INFO LEFT" class="brick-link brick-link-gray">
@@ -454,15 +447,15 @@
         </div>
         <!--End #float bar-->
 
-        <script type="text/javascript" src="./js/bootstrap.js"></script>
-        <script type="text/javascript" src="./js/waypoints.min.js"></script>
-        <script type="text/javascript" src="./js/jquery.flexslider-min.js"></script>
-        <script type="text/javascript" src="./js/jquery.jplayer.min.js"></script>
-        <script type="text/javascript" src="./js/jquery.gray.min.js"></script>
-        <script type="text/javascript" src="./js/main.js"></script>
-        <script type="text/javascript" src="./js/custom.theme.isotope.js"></script>
-        <script type="text/javascript" src="./js/custom.theme.js"></script>
-        <script type="text/javascript" src="./js/theme.pagebuilder.js"></script>
+        <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/waypoints.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/jquery.flexslider-min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/jquery.jplayer.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/jquery.gray.min.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/custom.theme.isotope.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/custom.theme.js' %}"></script>
+        <script type="text/javascript" src="{% static 'js/theme.pagebuilder.js' %}"></script>
 
     </body>
 </html>

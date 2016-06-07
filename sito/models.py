@@ -126,7 +126,7 @@ FORMATI = (
     	)
 
 class Post(models.Model):
-    categoria = models.ManyToManyField(Categorie, null=True, blank=True)
+    categoria = models.ForeignKey(Categorie, null=True, blank=True)
     titolo = models.CharField("Titolo:", max_length=100, null=True, blank=True)
     titolomenu = models.CharField("Titolo Menu:", max_length=100, null=True, blank=True)
     revhome = models.BooleanField('Home Gallery', 
@@ -156,11 +156,28 @@ class Post(models.Model):
             return '(Sin imagen)'
     image_img.short_description = 'Thumb'
     image_img.allow_tags = True
+
+    def mystyle(self):
+        size = self.impaginazione
+        return size
+
+    def myimage(self):
+        if impaginazione == 'width-and-small':
+            return self.thumb
+        elif impaginazione == 'width-and-height':
+            return self.thumb_due
+        elif impaginazione == 'width-and-long':
+            return self.thumb_tre
+        elif impaginazione == 'width-and-big':
+            return self.thumb_quattro
+        else:
+            return self.thumb
     
     def __unicode__(self):
         return self.titolo
 
     class Meta:
         verbose_name_plural = "Post"
+
 
 
