@@ -23,6 +23,7 @@ from django.conf.urls.static import static
 urlpatterns = [
     url(r'^admin/', admin.site.urls),
     url(r'^$', views.HomePage, name='home'),
+    url(r'^product/$', views.ProductView, name='contact'),
     #url(r'^detail/(?P<post_id>\d+)/$', views.DetailView, name='dettaglio'),
     url(r'^contact/$', views.contact, name='contact'),
     url(r'^success/$', views.success, name='success'),

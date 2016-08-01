@@ -31,6 +31,13 @@ def HomePage(request):
     return render_to_response('index.html', context, context_instance=RequestContext(request))
 
 
+
+def ProductView(request):
+    post_list = Post.objects.all().order_by('-id')
+    context = {'post_list':post_list}
+    return render_to_response('prodotti.html', context, context_instance=RequestContext(request))
+
+
 def DetailView(request, post_id):
     post = Post.objects.get(pk=post_id)
     filer_list = Image.objects.filter(folder_id = post.album)
