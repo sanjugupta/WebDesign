@@ -24,3 +24,9 @@ admin.site.register(Categorie, MyModelAdmin)
 admin.site.register(Immagini, ImmaginiAdmin)
 admin.site.register(Video, MyModelAdmin)
 admin.site.register(Post, PostAdmin)
+admin.site.register(Box, MyModelAdmin)
+admin.site.register(News, MyModelAdmin)
+admin.site.register(Slider, ImmaginiAdmin)
+admin.site.register(Page, MyModelAdmin)
+
+

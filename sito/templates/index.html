@@ -1,461 +1,53 @@
-<!DOCTYPE html>
-<html lang="en-US">
-    <head>{% load staticfiles %}
-        <title>PORTFOLIO BRICK GREY | Aside Responsive HTML Theme</title>
-        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+{% extends 'base.html' %}
 
-        <!-- Mobile Specific Metas -->
-        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
 
-        <!-- Favicons -->
-        <link rel="shortcut icon" href="./img/favicon.ico">
-        <link rel="apple-touch-icon-precomposed" href="{% static 'img/favicon.ico' %}">
+{% block content %}
 
-        <!-- Google fonts styles -->
-        <link rel="stylesheet" id="google-fonts-Roboto-css" href="http://fonts.googleapis.com/css?family=Roboto%3A100%2C100italic%2C300%2C300italic%2Cregular%2Citalic%2C500%2C500italic%2C700%2C700italic%2C900%2C900italic&amp;ver=3.9.1" type="text/css" media="all">
-        <link rel="stylesheet" id="google-fonts-Playfair+Display-css" href="http://fonts.googleapis.com/css?family=Playfair+Display%3Aregular%2Citalic%2C700%2C700italic%2C900%2C900italic&amp;ver=3.9.1" type="text/css" media="all">
 
-        <!-- Aside styles -->
-        <link rel="stylesheet" id="bootstrap-css" href="{% static 'styles/bootstrap.css' %}" type="text/css" media="screen">
-        <link rel="stylesheet" id="font-awesome-css" href="{% static 'styles/font-awesome.min.css' %}" type="text/css" media="screen">
-        <link rel="stylesheet" id="pagebuild-css" href="{% static 'styles/pagebuild.css' %}" type="text/css" media="screen">
-        <link rel="stylesheet" id="ux-aside-css" href="{% static 'styles/style.css' %}" type="text/css" media="screen">
-        <link rel="stylesheet" id="icons-css" href="{% static 'styles/icons.css' %}" type="text/css" media="screen">
+    {% include 'componenti/slider.html' %}
+    
+    {% include 'componenti/quadrati.html' %}
 
-        <!-- Jquery Lib version 1.11.0 -->
-        <script type="text/javascript" src="{% static 'js/jquery.min.js' %}"></script>
+    <div class="parallax-window" data-parallax="scroll" data-image-src="http://fullhdpictures.com/wp-content/uploads/2015/03/Landscape-Wallpapers-2015.png" style="height: 400px;">
+        <br>
+    </div>
 
-        <!-- IE hack -->
-        <!--[if lte IE 9]>
-        <link rel='stylesheet' id='cssie'  href='./styles/ie.css' type='text/css' media='screen' />
-        <![endif]-->
-        <!--[if lt IE 9]>
-        <script type="text/javascript" src="./js/ie.js"></script>
-        <link rel='stylesheet' id='cssie8'  href='./styles/ie8.css' type='text/css' media='screen' />
-        <![endif]-->
-        <!--[if lte IE 7]>
-        <div style="width: 100%;" class="messagebox_orange">Your browser is obsolete and does not support this webpage. Please use newer version of your browser or visit <a href="http://www.ie6countdown.com/" target="_new">Internet Explorer 6 countdown page</a>  for more information. </div>
-        <![endif]-->
-    </head>
-    <body class="home page page-template-default responsive-ux boxed-line aside-layout-ux">
-        <!-- Page Loading -->
-        <div class="page-loading visible">
-            <div class="page-loading-inn">
-                <div class="page-loading-transform">
-                    <div class="ux-loading"></div>
-                    <div class="ux-loading-transform">
-                        <div class="loading-dot1">&nbsp;</div>
-                        <div class="loading-dot2">&nbsp;</div>
-                    </div>
-                    <div class="site-loading-logo centered-ux">Aside</div>
-                </div>
-            </div>
+
+    {% include 'componenti/gioielli.html' %}
+    
+    <div class="parallax-window" data-parallax="scroll" data-image-src="http://worldinphoto.net/magazine/wp-content/uploads/2016/02/6900692-stunning-landscape.jpg" style="height: 400px;">
+        <br>
+    </div>
+
+
+    {% include 'componenti/biografia.html' %}
+
+    {% include 'componenti/carousel.html' %}
+
+    
+    <!-- div class="parallax-window" data-parallax="scroll" data-image-src="img/slider-1.jpg" style="height: 400px;">
+        <br>
+    </div-->
+
+
+    {% include 'componenti/slogan.html' %}
+
+
+    {% include 'componenti/news.html' %}
+    <div class="parallax-window" data-parallax="scroll" data-image-src="img/sabri_sfondo.png" style="height: 400px;">
+        <br>
+    </div>
+    
+    {% include 'componenti/contatti.html' %}
+    
+    <footer>
+        <div class="container">
+            
         </div>
-
-        <!-- Jplayer -->
-        <div id="jquery_jplayer" class="jp-jplayer"></div>
-
-        <!--Mobild Header meta-->
-        <div id="mobile-header-meta">
-
-            <!--Search Form-->
-            <form id="search_form" name="" method="get" class="search-form_header" action="http://ximudesign.com/aside/">
-                <input type="text" onblur="if (this.value == '') {this.value = 'SEARCH';}" onfocus="if (this.value == 'SEARCH') {this.value = '';}" id="s" name="s" value="SEARCH" class="textboxsearch">
-                <span class="submit-wrap">
-                    <input type="submit" value="" class="submitsearch" name="submitsearch">
-                    <i class="fa fa-long-arrow-right middle-ux"></i>
-                </span>
-            </form>
-
-            <!--Social icons-->
-           <div class="social-icons-sidebar">
-                <a class="icons-sidebar-unit" href="https://twitter.com/uiueux" title="Follow us"><i class="fa fa-twitter-square"></i></a>
-                <a class="icons-sidebar-unit" href="https://www.facebook.com/Uiueux/" title="Follow us"><i class="fa fa-facebook-square"></i></a>
-                <a class="icons-sidebar-unit" href="#" title=""><i class="fa fa-google-plus-square"></i></a>
-                <a class="icons-sidebar-unit" href="https://www.youtube.com/" title=""><i class="fa fa-youtube-square"></i></a>
-            </div>
-
-            <div class="mobile-meta-con">
-                <div class="copyright"></div>
-            </div>
-            <!--End header-info-mobile-->
-
-        </div>
-        <!--End mobile-header-meta-->
-        <div id="wrap">
-            <!--Sidaber-->
-            <aside id="sidebar" class="sidebar_hide">
-                <div id="sidebar-trigger">
-                    <div class="menu-icon"><i class="icon-m-menu"></i></div>
-                </div>
-                <!--End sidebar-trigger-->
-                <div class="sidebar-main">
-
-                    <!--Logo-->
-                    <h1 id="logo"><a href="index.html" title="Aside Responsive HTML Theme">Aside</a></h1>
-
-                    <!--Menu-->
-                    <nav id="navi" class=" clearfix">
-                        <div id="navi_wrap" class="menu-demo-menu-container">
-                            <ul class="menu">
-                                <li id="menu-item-885" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-122 current_page_item menu-item-has-children">
-                                    <a>HOME</a>
-                                </li>
-                                <li id="menu-item-885" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-122 current_page_item menu-item-has-children">
-                                    <a>CHI SONO</a>
-                                </li>
-                                <li id="menu-item-885" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-122 current_page_item menu-item-has-children">
-                                    <a>PORTFOLIO</a>
-                                </li>
-                                <li id="menu-item-885" class="menu-item menu-item-type-post_type menu-item-object-page page_item page-item-122 current_page_item menu-item-has-children">
-                                    <a>CONTATTI</a>
-                                </li>
-                            </ul>
-                        </div>
-                        <!--End #navi_wrap-->
-                    </nav>
-                    <!-- End Menu -->
-                    <div class="sidebar-bottom-wrap">
-                        <form id="search_form_1" name="" method="get" class="search-form_header" action="#">
-                            <input type="text" onblur="if (this.value == '') {this.value = 'SEARCH';}" onfocus="if (this.value == 'SEARCH') {this.value = '';}" id="search" name="search" value="SEARCH" class="textboxsearch">
-                            <span class="submit-wrap"><input type="submit" value="" class="submitsearch" name="submitsearch"><i class="fa fa-long-arrow-right middle-ux"></i></span>
-                        </form>
-                        <!--Social icons-->
-                        <div class="social-icons-sidebar">
-                            <a class="icons-sidebar-unit" href="https://twitter.com/uiueux" title="Follow us"><i class="fa fa-twitter-square"></i></a>
-                            <a class="icons-sidebar-unit" href="https://www.facebook.com/Uiueux/" title="Follow us"><i class="fa fa-facebook-square"></i></a>
-                            <a class="icons-sidebar-unit" href="#" title=""><i class="fa fa-google-plus-square"></i></a>
-                            <a class="icons-sidebar-unit" href="https://www.youtube.com/" title=""><i class="fa fa-youtube-square"></i></a>
-                        </div>
-                        <!--End Social icons-->
-                        <div class="copyright">Copyright uiueux.com</div><!--End copyright-->
-                    </div>
-                    <!--END sidebar-bottom-wrap-->
-                </div>
-                <!--end sidebar-main-->
-            </aside>
-            <!--Header-->
-            <header id="header" class="">
-                <h1 id="logo-mobile"><a href="index.html" title="Aside Responsive HTML Theme">Aside</a></h1>
-            </header>
-            <!--End Header-->
-            <!--#main-wrap-->
-            <div id="main-wrap">
-                <div id="main" style="-webkit-transform-origin: 50% 665px;">
-                    <div id="content">
-                        <div id="post-473" class="page type-page status-publish hentry">
-                            <div class="row-fluid " style="min-height: 799px;">
-                                <div id="content_wrap">
-                                    <div class="content-wrap-inn">
-                                        <div class="pagebuilder-wrap">
-                                            <div class="fullwrap_moudle">
-                                                <div class="row-fluid">
-                                                    <div class="fullwidth-wrap bg-theme-color-10 parallax" style="background-position: 50% 0px;" data-speed="19">
-                                                        <div class="row-fluid">
-                                                            <div class="span12 moudle bottom-space-no" style="">
-                                                                <!--Portfolio isotope-->
-                                                                <div class="row-fluid">
-                                                                    <!--Filter-->
-                                                                    <div class="clearfix filters filter-floating filter-floating-fixed">
-                                                                        <ul>
-                                                                            <li class="active">
-                                                                                <a href="#" data-filter="*">All</a>
-                                                                            </li>
-                                                                            {% for cat in categorie_list %}
-                                                                            <li>
-                                                                                <a data-filter=".{{cat.titolo}}" href="#">{{cat.titolo}}</a>
-                                                                            </li>
-                                                                            {% endfor %}
-                                                                        </ul>
-                                                                        <div class="filter-floating-triggle hidden-phone">
-                                                                            <i class="fa fa-filter"></i>
-                                                                        </div>
-                                                                    </div><!--End filter-->
-                                                                    <div class="container-isotope " style=" " data-post="20140406-081941-855">
-                                                                        <div id="isotope-load" style="display: none;">
-                                                                            <div class="ux-loading"></div>
-                                                                            <div class="ux-loading-transform">
-                                                                                <div class="loading-dot1">
-                                                                                    &nbsp;
-                                                                                </div>
-                                                                                <div class="loading-dot2">
-                                                                                    &nbsp;
-                                                                                </div>
-                                                                            </div>
-                                                                        </div>
-                                                                        <div class="isotope masonry  isotope_fade" data-space="1px" data-size="brick">
-
-                                                                            {% for post in post_list %}
-                                                                            <div class="{{post.categoria.titolo}} filter_blog filter_portfolio {{post.mystyle}} isotope-item  brick-with-img">
-                                                                                <div class="inside brick-inside post-bgcolor-default">
-                                                                                    <a href="{% url 'dettaglio' post.id %}" title="PORTFOLIO POST INFO LEFT" class="brick-link brick-link-gray">
-                                                                                    <div class="brick-hover-mask brick-hover">
-                                                                                        <h3 class="brick-title">{{post.titolo}}</h3>
-                                                                                    </div>
-                                                                                    <div class="brick-content brick-grey">{% load cropping %}
-                                                                                        {% if impaginazione == 'width-and-small' %}
-                                                                                        <img src="{% cropped_thumbnail post "thumb" %}" class="grayscale wp-post-image" alt="IMG_4783"><div class="brick-conteng-bg"></div>
-                                                                                        {% elif impaginazione == 'width-and-height' %}
-                                                                                        <img src="{% cropped_thumbnail post "thumb_due" %}" class="grayscale wp-post-image" alt="IMG_4783"><div class="brick-conteng-bg"></div>
-                                                                                        {% elif impaginazione == 'width-and-long' %}
-                                                                                        <img src="{% cropped_thumbnail post "thumb_tre" %}" class="grayscale wp-post-image" alt="IMG_4783"><div class="brick-conteng-bg"></div>
-                                                                                        {% elif impaginazione == 'width-and-big' %}
-                                                                                        <img src="{% cropped_thumbnail post "thumb_quattro" %}" class="grayscale wp-post-image" alt="IMG_4783"><div class="brick-conteng-bg"></div>
-                                                                                        {% else %}
-                                                                                         <img src="{% cropped_thumbnail post "thumb" %}" class="grayscale wp-post-image" alt="IMG_4783"><div class="brick-conteng-bg"></div>
-                                                                                        {% endif %}
-                                                                                    </div> </a>
-                                                                                </div><!--End inside-->
-                                                                            </div>
-                                                                            {% endfor %}
+    </footer>
+    
 
 
 
 
-                                                                            <div class="filter_architecture filter_blog filter_portfolio width-and-small isotope-item  brick-with-img">
-                                                                                <div class="inside brick-inside post-bgcolor-default">
-                                                                                    <a href="content-portfolio-images-on-right.html" title="PORTFOLIO POST INFO LEFT" class="brick-link brick-link-gray">
-                                                                                    <div class="brick-hover-mask brick-hover">
-                                                                                        <h3 class="brick-title">PORTFOLIO POST INFO LEFT</h3>
-                                                                                    </div>
-                                                                                    <div class="brick-content brick-grey">
-                                                                                        <img src="http://ximudesign.com/aside/wp-content/uploads/sites/17/2014/04/IMG_4783-400x400.jpg" class="grayscale wp-post-image" alt="IMG_4783"><div class="brick-conteng-bg"></div>
-                                                                                    </div> </a>
-                                                                                </div><!--End inside-->
-                                                                            </div>
-                                                                            <div class="filter_illustration filter_portfolio filter_uncategorized width-and-small isotope-item  brick-with-img">
-                                                                                <div class="inside brick-inside bg-theme-color-10">
-                                                                                    <a href="content-portfolio-images-on-right.html" title="EXPIRED SHAPES" class="brick-link brick-link-gray">
-                                                                                    <div class="brick-hover-mask brick-hover">
-                                                                                        <h3 class="brick-title">EXPIRED SHAPES</h3>
-                                                                                    </div>
-                                                                                    <div class="brick-content brick-grey">
-                                                                                        <img src="http://ximudesign.com/aside/wp-content/uploads/sites/17/2014/04/Expired-shapes-2-400x400.png" class="grayscale wp-post-image" alt="Expired-shapes-2"><div class="brick-conteng-bg"></div>
-                                                                                    </div> </a>
-                                                                                </div><!--End inside-->
-                                                                            </div>
-                                                                            <div class="filter_branding filter_illustration filter_portfolio filter_slider filter_uncategorized width-and-small isotope-item  brick-with-img">
-                                                                                <div class="inside brick-inside post-bgcolor-default">
-                                                                                    <a href="content-portfolio-images-on-right.html" title="PORTFOLIO POST FULLWIDTH" class="brick-link brick-link-gray">
-                                                                                    <div class="brick-hover-mask brick-hover">
-                                                                                        <h3 class="brick-title">PORTFOLIO POST FULLWIDTH</h3>
-                                                                                    </div>
-                                                                                    <div class="brick-content brick-grey">
-                                                                                        <img src="http://ximudesign.com/aside/wp-content/uploads/sites/17/2014/04/Paper-Hot-Cup-Mock-Up-vol-2-400x400.jpg" class="grayscale wp-post-image" alt="Paper-Hot-Cup-Mock-Up-vol-2"><div class="brick-conteng-bg"></div>
-                                                                                    </div> </a>
-                                                                                </div><!--End inside-->
-                                                                            </div>
-                                                                            <div class="filter_blog filter_illustration filter_portfolio filter_uncategorized width-and-small isotope-item  brick-with-img">
-                                                                                <div class="inside brick-inside post-bgcolor-default">
-                                                                                    <a href="content-portfolio-images-on-left.html" title="HIPSTER WIZARD" class="brick-link brick-link-gray">
-                                                                                    <div class="brick-hover-mask brick-hover">
-                                                                                        <h3 class="brick-title">HIPSTER WIZARD</h3>
-                                                                                    </div>
-                                                                                    <div class="brick-content brick-grey">
-                                                                                        <img src="http://ximudesign.com/aside/wp-content/uploads/sites/17/2014/04/Hipster-Wizard-0-400x400.jpg" class="grayscale wp-post-image" alt="Hipster-Wizard-0"><div class="brick-conteng-bg"></div>
-                                                                                    </div> </a>
-                                                                                </div><!--End inside-->
-                                                                            </div>
-                                                                            <div class="filter_blog filter_branding filter_portfolio filter_uncategorized width-and-height isotope-item  brick-with-img">
-                                                                                <div class="inside brick-inside post-bgcolor-default">
-                                                                                    <a href="content-portfolio-fullwidth.html" title="FULLWIDTH PORTFOLIO POST SLIDER" class="brick-link brick-link-gray">
-                                                                                    <div class="brick-hover-mask brick-hover">
-                                                                                        <h3 class="brick-title">FULLWIDTH PORTFOLIO POST SLIDER</h3>
-                                                                                    </div>
-                                                                                    <div class="brick-content brick-grey">
-                                                                                        <img src="http://ximudesign.com/aside/wp-content/uploads/sites/17/2014/04/Perspective-App-Screen-Presentation-MockUp-400x791.jpg" class="grayscale wp-post-image" alt="Perspective-App-Screen-Presentation-MockUp"><div class="brick-conteng-bg"></div>
-                                                                                    </div> </a>
-                                                                                </div><!--End inside-->
-                                                                            </div>
-                                                                            <div class="filter_illustration filter_portfolio filter_uncategorized width-and-small isotope-item  brick-with-img">
-                                                                                <div class="inside brick-inside post-bgcolor-default">
-                                                                                    <a href="content-portfolio-fullwidth.html" title="FULLWIDTH PORTFOLIO POST SLIDER" class="brick-link brick-link-gray">
-                                                                                    <div class="brick-hover-mask brick-hover">
-                                                                                        <h3 class="brick-title">FULLWIDTH PORTFOLIO POST SLIDER</h3>
-                                                                                    </div>
-                                                                                    <div class="brick-content brick-grey">
-                                                                                        <img src="http://ximudesign.com/aside/wp-content/uploads/sites/17/2014/04/Paper-Hot-Cup-Mock-Up-vol-0-400x400.png" class="grayscale wp-post-image" alt="Paper-Hot-Cup-Mock-Up-vol-0"><div class="brick-conteng-bg"></div>
-                                                                                    </div> </a>
-                                                                                </div><!--End inside-->
-                                                                            </div>
-                                                                            <div class="filter_blog filter_branding filter_portfolio filter_uncategorized width-and-long isotope-item  brick-with-img">
-                                                                                <div class="inside brick-inside post-bgcolor-default">
-                                                                                    <a href="content-portfolio-images-on-right.html" title="LONG TEXT CONTENT ON LEFT" class="brick-link brick-link-gray">
-                                                                                    <div class="brick-hover-mask brick-hover">
-                                                                                        <h3 class="brick-title">LONG TEXT CONTENT ON LEFT</h3>
-                                                                                    </div>
-                                                                                    <div class="brick-content brick-grey">
-                                                                                        <img src="http://ximudesign.com/aside/wp-content/uploads/sites/17/2014/04/Creative_Business_Card_Vol03_1-800x400.jpg" class="grayscale wp-post-image" alt="Creative_Business_Card_Vol03_1"><div class="brick-conteng-bg"></div>
-                                                                                    </div> </a>
-                                                                                </div><!--End inside-->
-                                                                            </div>
-                                                                            <div class="filter_blog filter_photography-2 filter_portfolio filter_slider filter_uncategorized width-and-big isotope-item  brick-with-img">
-                                                                                <div class="inside brick-inside post-bgcolor-default">
-                                                                                    <a href="content-portfolio-slider.html" title="ATMOSPHERE" class="brick-link brick-link-gray">
-                                                                                    <div class="brick-hover-mask brick-hover">
-                                                                                        <h3 class="brick-title">ATMOSPHERE</h3>
-                                                                                    </div>
-                                                                                    <div class="brick-content brick-grey">
-                                                                                        <img src="http://ximudesign.com/aside/wp-content/uploads/sites/17/2014/04/mikkolagerstedt_detour-800x638.jpg" class="grayscale wp-post-image" alt="mikkolagerstedt_detour"><div class="brick-conteng-bg"></div>
-                                                                                    </div> </a>
-                                                                                </div><!--End inside-->
-                                                                            </div>
-                                                                            <div class="filter_blog filter_branding filter_illustration filter_portfolio filter_uncategorized width-and-small isotope-item  brick-with-img">
-                                                                                <div class="inside brick-inside post-bgcolor-default">
-                                                                                    <a href="content-portfolio-images-on-left.html" title="TRIVALENT BRAND IDENTITY" class="brick-link brick-link-gray">
-                                                                                    <div class="brick-hover-mask brick-hover">
-                                                                                        <h3 class="brick-title">TRIVALENT BRAND IDENTITY</h3>
-                                                                                    </div>
-                                                                                    <div class="brick-content brick-grey">
-                                                                                        <img src="http://ximudesign.com/aside/wp-content/uploads/sites/17/2014/04/Trivalent-Brand-Identity-01-400x400.png" class="grayscale wp-post-image" alt="Trivalent Brand Identity 01"><div class="brick-conteng-bg"></div>
-                                                                                    </div> </a>
-                                                                                </div><!--End inside-->
-                                                                            </div>
-                                                                            <div class="filter_blog filter_illustration filter_portfolio filter_uncategorized width-and-small isotope-item  brick-with-img">
-                                                                                <div class="inside brick-inside post-bgcolor-default">
-                                                                                    <a href="content-portfolio-slider.html" title="REACCIONES." class="brick-link brick-link-gray">
-                                                                                    <div class="brick-hover-mask brick-hover">
-                                                                                        <h3 class="brick-title">REACCIONES.</h3>
-                                                                                    </div>
-                                                                                    <div class="brick-content brick-grey">
-                                                                                        <img src="http://ximudesign.com/aside/wp-content/uploads/sites/17/2014/04/Reacciónes-2-400x400.jpg" class="grayscale wp-post-image" alt="Reacciónes 2"><div class="brick-conteng-bg"></div>
-                                                                                    </div> </a>
-                                                                                </div><!--End inside-->
-                                                                            </div>
-                                                                            <div class="filter_blog filter_illustration filter_portfolio filter_uncategorized width-and-small isotope-item  brick-with-img">
-                                                                                <div class="inside brick-inside bg-theme-color-10">
-                                                                                    <a href="content-portfolio-images-on-left.html" title="GAME CHANGERS" class="brick-link brick-link-gray">
-                                                                                    <div class="brick-hover-mask brick-hover">
-                                                                                        <h3 class="brick-title">GAME CHANGERS</h3>
-                                                                                    </div>
-                                                                                    <div class="brick-content brick-grey">
-                                                                                        <img src="http://ximudesign.com/aside/wp-content/uploads/sites/17/2014/03/Game-Changers-1-400x400.png" class="grayscale wp-post-image" alt="Game-Changers-1"><div class="brick-conteng-bg"></div>
-                                                                                    </div> </a>
-                                                                                </div><!--End inside-->
-                                                                            </div>
-                                                                            <div class="filter_blog filter_illustration filter_portfolio filter_uncategorized width-and-big isotope-item  brick-with-img">
-                                                                                <div class="inside brick-inside post-bgcolor-default">
-                                                                                    <a href="content-portfolio-images-on-left.html" title="MASONRY PORTFOLIO WITH RIGHT SIDEBAR" class="brick-link brick-link-gray">
-                                                                                    <div class="brick-hover-mask brick-hover">
-                                                                                        <h3 class="brick-title">MASONRY PORTFOLIO WITH RIGHT SIDEBAR</h3>
-                                                                                    </div>
-                                                                                    <div class="brick-content brick-grey">
-                                                                                        <img src="http://ximudesign.com/aside/wp-content/uploads/sites/17/2014/03/Twin-Peaks-tribute-Character-design.jpg" class="grayscale wp-post-image" alt="Twin-Peaks-tribute-Character-design"><div class="brick-conteng-bg"></div>
-                                                                                    </div> </a>
-                                                                                </div><!--End inside-->
-                                                                            </div>
-                                                                            <div class="filter_illustration filter_portfolio filter_slider width-and-small isotope-item  brick-with-img">
-                                                                                <div class="inside brick-inside post-bgcolor-default">
-                                                                                    <a href="content-portfolio-images-on-right.html" title="VERTICAL LIST PORTFOLIO LEFT CONTENT" class="brick-link brick-link-gray">
-                                                                                    <div class="brick-hover-mask brick-hover">
-                                                                                        <h3 class="brick-title">VERTICAL LIST PORTFOLIO LEFT CONTENT</h3>
-                                                                                    </div>
-                                                                                    <div class="brick-content brick-grey">
-                                                                                        <img src="http://ximudesign.com/aside/wp-content/uploads/sites/17/2014/04/didelis-web2-400x400.jpg" class="grayscale wp-post-image" alt="didelis-web2"><div class="brick-conteng-bg"></div>
-                                                                                    </div> </a>
-                                                                                </div><!--End inside-->
-                                                                            </div>
-                                                                            <div class="filter_illustration filter_portfolio width-and-small isotope-item  brick-with-img">
-                                                                                <div class="inside brick-inside post-bgcolor-default">
-                                                                                    <a href="content-portfolio-images-on-left.html" title="SLIDER PORTFOLIO WITH RIGHT SIDEBAR" class="brick-link brick-link-gray">
-                                                                                    <div class="brick-hover-mask brick-hover">
-                                                                                        <h3 class="brick-title">SLIDER PORTFOLIO WITH RIGHT SIDEBAR</h3>
-                                                                                    </div>
-                                                                                    <div class="brick-content brick-grey">
-                                                                                        <img src="http://ximudesign.com/aside/wp-content/uploads/sites/17/2014/03/London-Market-illustrated-1-400x400.jpg" class="grayscale wp-post-image" alt="London Market illustrated 1"><div class="brick-conteng-bg"></div>
-                                                                                    </div> </a>
-                                                                                </div><!--End inside-->
-                                                                            </div>
-                                                                            <div class="filter_blog filter_illustration filter_portfolio width-and-small isotope-item  brick-with-img">
-                                                                                <div class="inside brick-inside post-bgcolor-default">
-                                                                                    <a href="content-portfolio-slider.html" title="MOVEMBER" class="brick-link brick-link-gray">
-                                                                                    <div class="brick-hover-mask brick-hover">
-                                                                                        <h3 class="brick-title">MOVEMBER</h3>
-                                                                                    </div>
-                                                                                    <div class="brick-content brick-grey">
-                                                                                        <img src="http://ximudesign.com/aside/wp-content/uploads/sites/17/2014/04/Short-Film-Poster-Design-1-400x400.jpg" class="grayscale wp-post-image" alt="Short Film Poster Design 1"><div class="brick-conteng-bg"></div>
-                                                                                    </div> </a>
-                                                                                </div><!--End inside-->
-                                                                            </div>
-                                                                            <div class="filter_branding filter_illustration filter_portfolio width-and-small isotope-item  brick-with-img">
-                                                                                <div class="inside brick-inside bg-theme-color-10">
-                                                                                    <a href="content-portfolio-fullwidth.html" title="PORTFOLIO WITH VERTICAL LIST" class="brick-link brick-link-gray">
-                                                                                    <div class="brick-hover-mask brick-hover">
-                                                                                        <h3 class="brick-title">PORTFOLIO WITH VERTICAL LIST</h3>
-                                                                                    </div>
-                                                                                    <div class="brick-content brick-grey">
-                                                                                        <img src="http://ximudesign.com/aside/wp-content/uploads/sites/17/2014/03/BS001-400x400.jpg" class="grayscale wp-post-image" alt="BS001"><div class="brick-conteng-bg"></div>
-                                                                                    </div> </a>
-                                                                                </div><!--End inside-->
-                                                                            </div>
-                                                                            <div class="filter_branding filter_portfolio filter_uncategorized width-and-small isotope-item  brick-with-img">
-                                                                                <div class="inside brick-inside post-bgcolor-default">
-                                                                                    <a href="content-portfolio-fullwidth.html" title="FULLWIDTH PORTFOLIO" class="brick-link brick-link-gray">
-                                                                                    <div class="brick-hover-mask brick-hover">
-                                                                                        <h3 class="brick-title">FULLWIDTH PORTFOLIO</h3>
-                                                                                    </div>
-                                                                                    <div class="brick-content brick-grey">
-                                                                                        <img src="http://ximudesign.com/aside/wp-content/uploads/sites/17/2014/03/Tracks-05-400x400.jpg" class="grayscale wp-post-image" alt="Tracks 05"><div class="brick-conteng-bg"></div>
-                                                                                    </div> </a>
-                                                                                </div><!--End inside-->
-                                                                            </div>
-                                                                        </div>
-                                                                    </div>
-                                                                    <!--End container-isotope-->
-                                                                </div><!--End row-fluid-->
-                                                            </div>
-                                                        </div>
-                                                    </div>
-                                                </div>
-                                            </div>
-                                            <script type="text/javascript">
-                                                jQuery(document).ready(function() {
-                                                    var ux_pb = new ThemePageBuilder();
-                                                    ux_pb.init();
-                                                });
-                                            </script>
-                                        </div>
-                                    </div><!--End content-wrap-inn-->
-                                </div><!--end content_wrap-->
-                            </div>
-                        </div>
-                        <!--end post-->
-                    </div>
-                    <!--end content-->
-                </div>
-                <!--End #main-->
-            </div>
-            <!--End #main-wrap-->
-            <div id="hot-close-sidebar-touch"></div>
-        </div><!--End #wrap-->
-        <div id="float-bar" class="hidden-phone">
-            <div class="float-bar-inn-wrap">
-                <div class="float-bar-inn">
-                    <!--Social network share icon-->
-                    <div class="float-bar-social-share">
-                        <button class="social-share-facebook" onclick="javascript:window.open('http://www.facebook.com/share.php?u=http://ximudesign.com/aside/','', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-facebook"></i></button>
-                        <button class="social-share-twitter" onclick="javascript:window.open('https://twitter.com/share?url=http://ximudesign.com/aside/','', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-twitter"></i></button>
-                        <button class="social-share-google-plus" onclick="javascript:window.open('https://plus.google.com/share?url=http://ximudesign.com/aside/','', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-google-plus"></i></button>
-                        <button class="social-share-pinterest" onclick="javascript:window.open('http://pinterest.com/pin/create/bookmarklet/?url=http://ximudesign.com/aside/&amp;is_video=false&amp;media=','', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-pinterest"></i></button>
-                        <button class="social-share-vk" onclick="javascript:window.open('http://vkontakte.ru/share.php?url=http://ximudesign.com/aside/','', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-vk"></i></button>
-                        <button class="social-share-linkedin" onclick="javascript:window.open('http://www.linkedin.com/shareArticle?mini=true&amp;url=http://ximudesign.com/aside/','', 'menubar=no,toolbar=no,resizable=yes,scrollbars=yes,height=600,width=600');return false;"><i class="fa fa-linkedin"></i></button>
-                    </div>
-                </div>
-                <!--End float inn wrap-->
-            </div><!--End float inn-->
-            <div id="float-bar-triggler"><i class="float-bar-triggler-inn"></i></div>
-        </div>
-        <!--End #float bar-->
-
-        <script type="text/javascript" src="{% static 'js/bootstrap.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/waypoints.min.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/jquery.flexslider-min.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/jquery.jplayer.min.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/jquery.gray.min.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/main.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/custom.theme.isotope.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/custom.theme.js' %}"></script>
-        <script type="text/javascript" src="{% static 'js/theme.pagebuilder.js' %}"></script>
-
-    </body>
-</html>
+{% endblock %}

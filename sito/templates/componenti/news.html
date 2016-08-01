@@ -1,0 +1,19 @@
+<section id="news">
+
+	<h1>NEWS - EVENTI</h1>
+	<div class="container">
+		
+		<div class="row">
+			{% for news in news_list %}
+			<div class="col-xs-12 col-sm-3">
+				<a href="#">{% load cropping %}
+					<img src="{% cropped_thumbnail news "thumb" %}" class="img-responsive">
+				</a>
+				<h3>{{news.titolo|safe}}</h3>
+			</div>
+			{% endfor %}
+
+		</div><!-- row -->
+	</div><!-- container -->
+
+</section>
