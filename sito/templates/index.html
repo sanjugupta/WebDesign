@@ -2,6 +2,8 @@
 
 
 {% block content %}
+    
+    {% load staticfiles %}
 
 
     {% include 'componenti/slider.html' %}
@@ -34,7 +36,7 @@
 
 
     {% include 'componenti/news.html' %}
-    <div class="parallax-window" data-parallax="scroll" data-image-src="img/sabri_sfondo.png" style="height: 400px;">
+    <div class="parallax-window" data-parallax="scroll" data-image-src="{% static 'img/sabri_sfondo.png' %}" style="height: 400px;">
         <br>
     </div>
     

@@ -168,7 +168,16 @@ body {
 }
 #news p {
 	font-family: 'Ubuntu', sans-serif;
+  font-size: 10pt;
+  text-align: justify;
 }
+
+#partner {
+  background-color: #cccccc;
+  padding-top: 10px;
+  margin-bottom:20px;
+}
+
 
 #notizie ul li {
 	min-height: 500px;
@@ -392,4 +401,7 @@ footer {
 #dettaglio .container {
 	margin-top:60px;
 }
+
+
+
 	

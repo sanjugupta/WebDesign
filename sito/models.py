@@ -242,9 +242,28 @@ class Page(models.Model):
 
 
 
+class TipologiaEventi(models.Model):
+    titolo = models.CharField(max_length=100)
+    titolo_uk = models.CharField(max_length=100, verbose_name="Titolo Inglese:", null=True, blank=True)
+    titolo_fra = models.CharField(max_length=100, verbose_name="Titolo Francese:", null=True, blank=True)
+    titolo_esp = models.CharField(max_length=100, verbose_name="Titolo Spagna:", null=True, blank=True)
+    sottotitolo = models.CharField(max_length=250, null=True, blank=True)
+
+    def __unicode__(self):
+        return self.titolo
+
+    class Meta:
+        verbose_name_plural = "Tipologie Eventi"
+
+
+
 
 class News(models.Model):
+    categoria = models.ForeignKey(TipologiaEventi, null=True, blank=True)
     titolo = models.CharField(max_length=100, verbose_name="Titolo:")
+    titolo_uk = models.CharField(max_length=100, verbose_name="Titolo Inglese:", null=True, blank=True)
+    titolo_fra = models.CharField(max_length=100, verbose_name="Titolo Francese:", null=True, blank=True)
+    titolo_esp = models.CharField(max_length=100, verbose_name="Titolo Spagna:", null=True, blank=True)
     inizio = models.DateTimeField('inizio')
     fine = models.DateTimeField('fine')
     image = models.ImageField(blank=True, null=True, upload_to='slider')
@@ -255,6 +274,9 @@ class News(models.Model):
     croplibero = ImageRatioField('image', '595x335', free_crop=True, verbose_name="Ritaglio Libero")
     album = FilerFolderField(null=True, blank=True)
     descrizione = models.TextField(null=True, blank=True, verbose_name="Descrizione")
+    descrizione_uk = models.TextField(null=True, blank=True, verbose_name="Descrizione Inglese")
+    descrizione_fra = models.TextField(null=True, blank=True, verbose_name="Descrizione Francese")
+    descrizione_esp = models.TextField(null=True, blank=True, verbose_name="Descrizione Spagna")
     pub_date = models.DateTimeField('date published')
     active = models.BooleanField('attiva', default=False)
     slide = models.BooleanField('Mostra in Slide', default=False)

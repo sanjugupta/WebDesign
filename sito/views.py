@@ -16,7 +16,7 @@ from datetime import datetime
 def HomePage(request):
     post_list = Post.objects.all().order_by('-id')
     slider_list = Post.objects.all().order_by('pub_date')
-    news_list = News.objects.all().order_by('-pub_date')
+    news_list = News.objects.all().order_by('-pub_date')[:3]
     box_list = Box.objects.all()
     gioielli = Page.objects.get(id=1)
     biografia = Page.objects.get(id=2)

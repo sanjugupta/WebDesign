@@ -28,5 +28,7 @@ admin.site.register(Box, MyModelAdmin)
 admin.site.register(News, MyModelAdmin)
 admin.site.register(Slider, ImmaginiAdmin)
 admin.site.register(Page, MyModelAdmin)
+admin.site.register(TipologiaEventi, MyModelAdmin)
+
 
 
