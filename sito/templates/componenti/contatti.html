@@ -2,22 +2,33 @@
 		<div class="container">
 			<div class="col-xs-4"></div><div class="col-xs-4"><span class="spanband">CONTATTI</span><br><br></div><div class="col-xs-4"></div>
 			<div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
-				<form>
+				<form action="/contact/" method="post">{% csrf_token %}
 				  <div class="form-group">
-				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Nome">
+				    <input type="text" name="nome" class="form-control" id="exampleInputEmail1" placeholder="Nome">
 				  </div>
 				  <div class="form-group">
-				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
+				    <input type="email" name="email" class="form-control" id="exampleInputEmail1" placeholder="Email">
 				  </div>
 				  <div class="form-group">
-				    <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Oggetto">
+				    <input type="text" name="oggetto" class="form-control" id="exampleInputEmail1" placeholder="Oggetto">
 				  </div>
 				  <div class="form-group">
-				    <textarea type="email" class="form-control" id="exampleInputEmail1" placeholder="Messaggio:"></textarea>
+				    <textarea type="text" name="messaggio" class="form-control" id="exampleInputEmail1" placeholder="Messaggio:"></textarea>
 				  </div>
-				<h3>INVIA MESSAGGIO</h3>
+				<input id="contact_submit" type="submit" style="background-color: #666666; color: #ffffff; font-size:18pt;" />
 				</form>
 			</div>
-			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4"></div>
+
+			<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+				<p>
+					<a href="mailto:info@sabriartbijoux.it">
+						<i class="fa fa-envelope" aria-hidden="true"></i> info@sabriartbijoux.it<br>
+						<i class="fa fa-phone-square" aria-hidden="true"></i> +39 347.4344112
+						<br>
+						<br>
+						<i class="fa fa-map-marker" aria-hidden="true"></i> Via G. Rossa 9/B - 20056 Trezzo sull'Adda (MI)
+					</a>
+				</p>
+			</div>
 		</div>
 	</section>

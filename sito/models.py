@@ -290,3 +290,10 @@ class News(models.Model):
 
 
 
+
+## CONTACT
+class ContactForm(forms.Form):
+    nome = forms.CharField(label='Nome', max_length=100)
+    email = forms.CharField(label='email', max_length=100)
+    oggetto = forms.CharField(label='Oggetto', max_length=100, required = False)
+    messaggio = forms.CharField(label='Messaggio', widget=forms.Textarea, required = False)

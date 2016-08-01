@@ -145,6 +145,7 @@ body {
 #contatti textarea {
 	background-color: #F4F5F6;
 	color: #999999;
+  width: 100%;
 }
 
 #contatti h3 {
@@ -152,6 +153,13 @@ body {
 	color: #ffffff;
 	padding:10px;
 	text-align: center;
+}
+
+.contact_submit {
+    background-color: #666666;
+    color: #ffffff;
+    padding:10px;
+    text-align: center;
 }
 
 #news {
@@ -402,6 +410,12 @@ footer {
 	margin-top:60px;
 }
 
+
+
+footer p {
+  color:#ffffff;
+  text-align: center;
+}
 
 
 	

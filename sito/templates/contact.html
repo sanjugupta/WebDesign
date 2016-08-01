@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+<div id="contatti" class="container">
+	<div class="col-xs-12 col-sm-12">
+
+
+
+						<form id="contactForm" class="white-row" action="/contact/" method="post">{% csrf_token %}
+							<div class="row">
+								<div class="form-group">
+									<div class="col-sm-6 col-md-6">
+										<label>Nome:</label>
+										<input type="text" value="" data-msg-required="Please enter your name." maxlength="100" class="form-control" name="nome" id="contact_name" required>
+									</div>
+									
+									<div class="col-sm-6 col-md-6">
+										<label>E-mail *</label>
+										<input type="email" value="" data-msg-required="Please enter your email address." data-msg-email="Please enter a valid email address." maxlength="100" class="form-control" name="email" id="contact_email" required>
+									</div>
+			
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group">
+									<div class="col-md-12">
+										<label>Oggetto:</label>
+										<input type="text" value="" data-msg-required="Please enter the subject." maxlength="100" class="form-control" name="oggetto" id="contact_subject">
+									</div>
+								</div>
+							</div>
+							<div class="row">
+								<div class="form-group">
+									<div class="col-md-12">
+										<label>Messaggio *</label>
+										<textarea maxlength="5000" data-msg-required="Please enter your message." rows="10" class="form-control" name="messaggio" id="contact_message"></textarea>
+									</div>
+								</div>
+								<div class="">
+									<input type="checkbox" style="margin-left:15px"> &nbsp;&nbsp;Autorizzo il trattamento dei dati personali nel rispetto delle leggi sulla privacy L. 675/96
+								</div>
+							</div>
+
+							<br>
+
+							<div class="row">
+								<div class="col-md-12">
+									<input id="contact_submit" type="submit" value="INVIA" class="btn btn-primary btn-md" data-loading-text="Loading...">
+								</div>
+							</div>
+						</form>
+
+
+	</div>
+
+	
+</div>
+
+
+{% endblock %}

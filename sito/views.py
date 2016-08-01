@@ -43,3 +43,33 @@ def categorie(request):
 	categorie_list = Categorie.objects.all()
 	context = {'categorie_list':categorie_list}
 	return context
+
+
+
+
+### EMAIL - CONTACT FORM
+def contact(request):
+    if request.method == 'POST': # If the form has been submitted...
+        form = ContactForm(request.POST) # A form bound to the POST data
+        if form.is_valid(): # All validation rules pass
+            subject = 'MESSAGGIO DAL SITO STUCCHILUCE'
+            #message = form.cleaned_data['messaggio']
+            message = render_to_string('contact.txt', {'post': request.POST})
+            sender = form.cleaned_data['email']
+            cc_myself = False
+
+            recipients = ['pierangelo1982@gmail.com']
+            if cc_myself:
+                recipients.append(sender)
+        
+            send_mail(subject, message, sender, recipients)
+            return HttpResponseRedirect('/success/') # Redirect after POST
+    else:
+        form = ContactForm() # An unbound form
+
+    #return render_to_response('contact.html', {'form': form,})
+    return render_to_response('contact.html', context_instance=RequestContext(request))
+
+
+def success(request):
+    return render_to_response('success.html', context_instance=RequestContext(request))
