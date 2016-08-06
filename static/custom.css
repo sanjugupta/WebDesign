@@ -411,6 +411,20 @@ footer {
 	margin-top:60px;
 }
 
+#menu-categorie ul {
+  margin-top: 30px;
+}
+
+#menu-categorie ul li {
+  display: inline-block;
+  padding-left: 10px;
+  padding-right: 10px;
+  float: right;
+  border-left-width: 1px;
+  border-left-color: #23527c;
+  border-left-style: solid;
+}
+
 
 
 footer p {

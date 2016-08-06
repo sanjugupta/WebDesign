@@ -14,6 +14,10 @@
 
     <!-- SLIDER REVOLUTION -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'rs-plugin/css/style.css' %}" media="screen" />
+    <script type="text/javascript" src="{% static 'rs-plugin/js/jquery.themepunch.plugins.min.js' %}"></script>
+    <script type="text/javascript" src="{% static 'rs-plugin/js/jquery.themepunch.revolution.min.js' %}"></script>
+    <link rel="stylesheet" type="text/css" href="{% static 'rs-plugin/css/settings.css' %}" media="screen" />
     
     	<script type="text/javascript" src="{% static 'js/jquery.flexslider.js' %}"></script>
     	<script type="text/javascript" src="{% static 'js/jquery.vticker.js' %}"></script>
@@ -28,9 +32,15 @@
         <script type="text/javascript" src="{% static 'js/custom.theme.isotope.js' %}"></script>
         <script type="text/javascript" src="{% static 'js/custom.theme.js' %}"></script>
         <script type="text/javascript" src="{% static 'js/theme.pagebuilder.js' %}"></script>
+
+
+    <!-- UNITE GALLERY -->
+    <script type='text/javascript' src="{% static 'unitegallery/js/unitegallery.js' %}"></script> 
+    <link rel='stylesheet' href="{% static 'unitegallery/css/unite-gallery.css' %}" type='text/css' />
+    <script type='text/javascript' src="{% static 'unitegallery/themes/tiles/ug-theme-tiles.js' %}"></script>
         
         
-                <!-- Aside styles -->
+        <!-- Aside styles -->
         <!--link rel="stylesheet" id="bootstrap-css" href="{% static 'styles/bootstrap.css' %}" type="text/css" media="screen"-->
         <link rel="stylesheet" id="font-awesome-css" href="{% static 'styles/font-awesome.min.css' %}" type="text/css" media="screen">
         <link rel="stylesheet" id="pagebuild-css" href="{% static 'styles/pagebuild.css' %}" type="text/css" media="screen">
@@ -38,10 +48,6 @@
         <link rel="stylesheet" id="icons-css" href="{% static 'styles/icons.css' %}" type="text/css" media="screen">
     	
     
-    <link rel="stylesheet" type="text/css" href="{% static 'rs-plugin/css/style.css' %}" media="screen" />
-    <script type="text/javascript" src="{% static 'rs-plugin/js/jquery.themepunch.plugins.min.js' %}"></script>
-    <script type="text/javascript" src="{% static 'rs-plugin/js/jquery.themepunch.revolution.min.js' %}"></script>
-    <link rel="stylesheet" type="text/css" href="{% static 's-plugin/css/settings.css' %}" media="screen" />
 	<script type="text/javascript" src="{% static 'js/parallax.js' %}"></script>
     <!-- Bootstrap -->
     <link href="{% static 'css/bootstrap.min.css' %}" rel="stylesheet">
@@ -74,7 +80,7 @@ $(window).load(function() {
     itemWidth: 210,
     itemMargin: 5,
     minItems: 2,
-    maxItems: 4
+    maxItems: 5
   });
 });
 </script>

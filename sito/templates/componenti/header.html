@@ -2,10 +2,10 @@
 <nav class="navbar navbar-default">
 	<div class="container">
 		  <ul class="lingua">
-		  	<li><a href="/lingua/ita">IT</a></li>
-		  	<li><a href="/lingua/eng">EN</a></li>
-		  	<li><a href="/lingua/esp">ES</a></li>
-		  	<li><a href="/lingua/fra">FR</a></li>
+		  	<li><a href="/language/ita">IT</a></li>
+		  	<li><a href="/language/eng">EN</a></li>
+		  	<li><a href="/language/esp">ES</a></li>
+		  	<li><a href="/language/fra">FR</a></li>
 		  </ul>
 	</div>
   <div class="container">
@@ -27,14 +27,35 @@
       </ul>
       
       <ul class="nav navbar-nav navbar-right">
+        {% if session_language = 'eng' %}
         <li><a href="/#">HOME</a></li>
         <li><a href="/#designer">ABOUT</a></li>
-        <li><a href="/#gioielli">PORTFOLIO</a></li>
+        <li><a href="/product">PORTFOLIO</a></li>
+        <li><a href="/#news">EVENTS</a></li>
+        <li><a href="/#contatti">CONTACTS</a></li>
+        {% elif session_language = 'fra' %}
+        <li><a href="/#">HOME</a></li>
+        <li><a href="/#designer">ABOUT</a></li>
+        <li><a href="/product">PORTFOLIO</a></li>
+        <li><a href="/#news">ÉVÉNEMENTS</a></li>
+        <li><a href="/#contatti">CONTACTS</a></li>
+        {% elif session_language = 'esp' %}
+        <li><a href="/#">HOME</a></li>
+        <li><a href="/#designer">ABOUT</a></li>
+        <li><a href="/product">PORTFOLIO</a></li>
+        <li><a href="/#news">EVENTOS</a></li>
+        <li><a href="/#contatti">CONTACTOS</a></li>
+        {% else %}
+        <li><a href="/#">HOME</a></li>
+        <li><a href="/#designer">ABOUT</a></li>
+        <li><a href="/product">PORTFOLIO</a></li>
         <li><a href="/#news">EVENTI</a></li>
         <li><a href="/#contatti">CONTATTI</a></li>
+        {% endif %}
       </ul>
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
 </nav>
 
 </div>
+

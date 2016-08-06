@@ -34,7 +34,17 @@ def HomePage(request):
 
 def ProductView(request):
     post_list = Post.objects.all().order_by('-id')
-    context = {'post_list':post_list}
+    categorie_list = Categorie.objects.all()
+    context = {'post_list':post_list,
+                'categorie_list':categorie_list}
+    return render_to_response('prodotti.html', context, context_instance=RequestContext(request))
+
+
+def ProductFilterView(request, post_id):
+    post_list = Post.objects.filter(categoria_id = post_id).order_by('-id')
+    categorie_list = Categorie.objects.all()
+    context = {'post_list':post_list,
+                'categorie_list':categorie_list}
     return render_to_response('prodotti.html', context, context_instance=RequestContext(request))
 
 
@@ -80,3 +90,11 @@ def contact(request):
 
 def success(request):
     return render_to_response('success.html', context_instance=RequestContext(request))
+
+
+### setting language session
+def language(request, language='it'):
+    response = HttpResponse("setting language to %s" % language)
+    response.set_cookie('lang', language)
+    request.session['lang'] = language
+    return HttpResponseRedirect(request.META.get('HTTP_REFERER'))
