@@ -406,9 +406,15 @@ footer {
 }
 
 
-
+#dettaglio {
+  margin-bottom: 30px;
+}
 #dettaglio .container {
 	margin-top:60px;
+}
+
+#dettaglio .fa-2x {
+  font-size: 18pt;
 }
 
 #menu-categorie ul {

@@ -69,7 +69,7 @@ def contact(request):
     if request.method == 'POST': # If the form has been submitted...
         form = ContactForm(request.POST) # A form bound to the POST data
         if form.is_valid(): # All validation rules pass
-            subject = 'MESSAGGIO DAL SITO STUCCHILUCE'
+            subject = 'MESSAGGIO DAL SITO SABRIART BIJOUX'
             #message = form.cleaned_data['messaggio']
             message = render_to_string('contact.txt', {'post': request.POST})
             sender = form.cleaned_data['email']
