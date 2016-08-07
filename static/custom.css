@@ -439,4 +439,26 @@ footer p {
 }
 
 
+
+
+
+/* ------ SMARTPHONE ------- */
+@media (max-width:480px) {
+
+  #quadrati .quadro {
+    margin-bottom: 30px;
+  }
+
+  #slogan h1 {
+    font-size: 20pt;
+  }
+
+  #menu-categorie ul li {
+    display: inline;
+    float: left;
+    margin-bottom:10px;
+  }
+
+}
+
 	
