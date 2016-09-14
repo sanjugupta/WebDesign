@@ -2,8 +2,56 @@
 
 
 {% block content %}
+
+<section id="slider">{% load staticfiles %}
+	<div class="tp-banner-container">
+          <div class="tp-banner" >
+            <ul>
+              <!-- SLIDE  -->
+              <li data-transition="fade" data-slotamount="5" data-masterspeed="700" >
+                <!-- MAIN IMAGE -->
+                <img src="{% static 'img/contatti-foto-1.jpg' %}" alt="gallery 1"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+              </li>
+              <!-- SLIDE  -->
+              <li data-transition="fade" data-slotamount="5" data-masterspeed="700" >
+                <!-- MAIN IMAGE -->
+                <img src="{% static 'img/contatti-foto-2.jpg' %}" alt="gallery 1"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+              </li>
+            </ul>
+
+          </div>
+      </div>
+              <script type="text/javascript">
+              var revapi;
+              jQuery(document).ready(function() {
+                   revapi = jQuery('.tp-banner').revolution(
+                  {
+                    delay:4000,
+                    startwidth:1170,
+                    startheight:500,
+                    hideThumbs:10,
+                    fullWidth:"on",
+                    forceFullWidth:"off"
+                  });
+              }); //ready
+            </script>
+</section>
+
 <div id="contatti" class="container">
-	<div class="col-xs-12 col-sm-12">
+	<div class="col-xs-12">
+		<h2 class="text-center">
+			{% if session_language = 'eng' %}
+            	Contacts 
+            {% elif session_language = 'fra' %}
+                Contacts 
+            {% elif session_language = 'esp' %}
+            	Contactos
+            {% else %}
+           		Contatti
+            {% endif %}
+		</h2>
+	</div>
+	<div class="col-xs-12 col-sm-8">
 
 
 
@@ -50,6 +98,77 @@
 								</div>
 							</div>
 						</form>
+
+
+	</div>
+
+
+	<div class="col-xs-12 col-sm-12 col-md-4 col-lg-4">
+				<h4>
+					{% if session_language = 'eng' %}
+                        Contacts and Purchases online 
+                    {% elif session_language = 'fra' %}
+                        Contacts and Purchases online 
+                    {% elif session_language = 'esp' %}
+                        Contactos y Adquisiciones online
+                    {% else %}
+                        Contatti e Acquisti online
+                    {% endif %}
+				</h4>
+				
+				<p>
+					{% if session_language = 'eng' %}
+                        If you are interested to purchase a Sabriart Bijoux and you want further information on the collections, or for any other information it fills out here the form to side, or send me a direct email. 
+                    
+                    {% elif session_language = 'fra' %}
+                        Si tu es intéressé à acheter un Sabriart Bijoux et tu veux des informations sur les collections, ou pour n'importe quel autre renseignement remplit ici le formulaire au côté, ou envoie-moi une email direct.
+                    
+                    {% elif session_language = 'esp' %}
+                        Si eres interesado en adquirir un Sabriart Bijoux y quieres mayores informaciones sobre las colecciones, o por cualquiera otra información rellena aquí el impreso a lado, o bien me mandas un email directo.
+                    
+                    {% else %}
+                        Se sei interessato ad acquistare un Sabriart Bijoux e vuoi maggiori informazioni sulle collezioni, o per qualsiasi altra informazione compila il modulo qui a lato, oppure inviami una email diretta.
+                    {% endif %}
+                    <br>
+                    <br>
+                    <br>
+				</p>
+
+				<p>
+					<a href="mailto:info@sabriartbijoux.it">
+						<i class="fa fa-envelope" aria-hidden="true"></i> info@sabriartbijoux.it<br>
+					</a>
+						<i class="fa fa-phone-square" aria-hidden="true"></i> +39 347.4344112
+						<br>
+						<br>
+				</p>
+
+				<p>
+					{% if session_language = 'eng' %}
+                        <span style="font-size: 16px; font-weight:800;">Where you find me</span><br>
+                        Milan, ITALY
+                    {% elif session_language = 'fra' %}
+                        <span style="font-size: 16px; font-weight:800;">Où tu me trouves</span><br>
+                        Milan, ITALIE
+                    {% elif session_language = 'esp' %}
+                        <span style="font-size: 16px; font-weight:800;">Dónde me encuentras</span><vr>
+                        Milán, ITALIA
+                    {% else %}
+                        <span style="font-size: 16px; font-weight:800;">Dove mi trovi</span><br>
+                        Milano, ITALIA
+                    {% endif %}
+                    <br>
+                    <br>
+				</p>
+
+				<p>
+					<a href="https://www.facebook.com/sabriart.bijoux" target="_Blank">
+						<i class="fa fa-facebook-square fa-2x" aria-hidden="true">&nbsp;&nbsp;</i>
+					</a>
+					<a href="https://it.pinterest.com/sabriartbijoux/" target="_Blank">
+						<i class="fa fa-pinterest-square fa-2x" aria-hidden="true"></i>
+					</a>
+				</p>
 
 
 	</div>

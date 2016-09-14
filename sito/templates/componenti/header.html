@@ -32,25 +32,25 @@
         <li><a href="/#designer">ABOUT</a></li>
         <li><a href="/product">PORTFOLIO</a></li>
         <li><a href="/#news">EVENTS</a></li>
-        <li><a href="/#contatti">CONTACTS</a></li>
+        <li><a href="{% url 'contact' %}">CONTACTS</a></li>
         {% elif session_language = 'fra' %}
         <li><a href="/#">HOME</a></li>
         <li><a href="/#designer">ABOUT</a></li>
         <li><a href="/product">PORTFOLIO</a></li>
         <li><a href="/#news">ÉVÉNEMENTS</a></li>
-        <li><a href="/#contatti">CONTACTS</a></li>
+        <li><a href="{% url 'contact' %}">CONTACTS</a></li>
         {% elif session_language = 'esp' %}
         <li><a href="/#">HOME</a></li>
         <li><a href="/#designer">ABOUT</a></li>
         <li><a href="/product">PORTFOLIO</a></li>
         <li><a href="/#news">EVENTOS</a></li>
-        <li><a href="/#contatti">CONTACTOS</a></li>
+        <li><a href="{% url 'contact' %}">CONTACTOS</a></li>
         {% else %}
         <li><a href="/#">HOME</a></li>
         <li><a href="/#designer">ABOUT</a></li>
         <li><a href="/product">PORTFOLIO</a></li>
         <li><a href="/#news">EVENTI</a></li>
-        <li><a href="/#contatti">CONTATTI</a></li>
+        <li><a href="{% url 'contact' %}">CONTATTI</a></li>
         {% endif %}
       </ul>
     </div><!-- /.navbar-collapse -->

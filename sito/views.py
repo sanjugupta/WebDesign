@@ -75,7 +75,7 @@ def contact(request):
             sender = form.cleaned_data['email']
             cc_myself = False
 
-            recipients = ['pierangelo1982@gmail.com']
+            recipients = ['info@sabriartbijoux.it']
             if cc_myself:
                 recipients.append(sender)
         
