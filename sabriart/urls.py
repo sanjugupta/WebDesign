@@ -26,6 +26,7 @@ urlpatterns = [
     url(r'^product/$', views.ProductView, name='product'),
     url(r'^product/(?P<post_id>\d+)/$', views.ProductFilterView, name='product-filter'),
     url(r'^contact/$', views.contact, name='contact'),
+    url(r'^shop/$', views.shop, name='shop'),
     url(r'^detail/(?P<post_id>\d+)/$', views.DetailView, name='dettaglio'),
     url(r'^success/$', views.success, name='success'),
     url(r'^language/(?P<language>[a-z\-]+)/$', views.language),
