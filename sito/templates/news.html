@@ -1,0 +1,76 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<div class="container" style="margin-top: 60px">
+    <div class="col-xs-12 col-sm-4" style="margin-top:15px;">
+        <h1 style="font-size:14pt;">EVENTI{% if categoria %} | {{categoria.titolo}}{% endif %}</h1>
+    </div>
+    <div id="menu-categorie" class="col-xs-12 col-sm-8" style="margin-bottom:15px;">
+        <ul>
+            {% for cat in tipologie_list %}
+            <li>
+                <a href="{% url 'news-filter' cat.id %}">
+                    {% if session_language = 'eng' %}
+                        {{cat.titolo_uk}}
+                    {% elif session_language = 'fra' %}
+                        {{cat.titolo_fra}}
+                    {% elif session_language = 'esp' %}
+                        {{cat.titolo_esp}}
+                    {% else %}
+                        {{cat.titolo}}
+                    {% endif %}
+                </a>
+            </li>
+            {% endfor %}
+            <li><a href="{% url 'news' %}">All</a></li>
+        </ul>
+    </div>
+</div>
+
+<div class="container" style="margin-top:15px; margin-bottom:100px;">
+
+        {% for news in news_list %}
+            <div class="col-xs-12 col-sm-3">
+                <a href="#">{% load cropping %}
+                    <a href="" data-target="#myModal{{news.id}}" data-toggle="modal" data-target="#myModal{{news.id}}">
+                        <img src="{% cropped_thumbnail news "thumb" %}" class="img-responsive">
+                    </a>
+                </a>
+                <h3>{{news.titolo|safe}}</h3>
+                <p>{{news.descrizione|safe|truncatechars:140}}</p>
+            </div>
+            {% endfor %}
+
+</div>
+
+<!-- Modal -->
+{% for news in news_list %}
+<div class="modal fade " id="myModal{{news.id}}" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+  <div class="modal-dialog modal-lg" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+        <h4 class="modal-title" id="myModalLabel">{{news.titolo|safe}}</h4>
+      </div>
+      <div class="modal-body" style="padding-top:20px;">
+        <div class="col-xs-12 col-sm-4">
+            <br>
+            <img src="/media/{{news.image}}" class="img-responsive">
+        </div>
+        <div class="col-xs-12 col-sm-8">
+            <br>
+            <p>{{news.descrizione|safe}}</p>
+        </div>
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>
+{% endfor %}
+
+
+{% endblock %}

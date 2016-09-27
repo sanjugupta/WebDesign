@@ -69,10 +69,10 @@
 				
 				<p>
 					{% if session_language = 'eng' %}
-						If you are interested to purchase a Sabriart Bijoux and you want further information on the collections, on the costs and on the consignments, or for any other information it fills out here the form to side, or send me a direct email. 
+						If you are interested to purchase a Sabriart Bijoux and you want further information on the collections, on the costs and on the consignments, or for any other information it fills out here the form to side, or send me a direct email.
                     
                     {% elif session_language = 'fra' %}
-						Si tu es intéressé à acheter un Sabriart Bijoux et tu veux des informations sur les collections, sur les coûts et sur les envoisou, pour n'importe quel autre renseignement remplit ici le formulaire au côté, ou envoie-moi une email direct. 
+						Si tu es intéressé à acheter un Sabriart Bijoux et tu veux des informations sur les collections, sur les coûts et sur les envois ou pour n'importe quel autre renseignement remplit ici le formulaire au côté, ou envoie-moi une email direct.
                     
                     {% elif session_language = 'esp' %}
 						Si eres interesado en adquirir un Sabriart Bijoux y quieres mayores informaciones sobre las colecciones, sobre los costes y sobre los envíos, o por cualquiera otra información rellena aquí el impreso a lado, o bien me mandas un email directo. 
@@ -100,19 +100,19 @@
 
 				<p>
 					{% if session_language = 'eng' %}
-						If you want to directly purchase a Sabriart Bijoux you can come to my stand in mine "mobile Tappe": find her in the section "Events" or you can follow the page Facebook.<br>
-						Doesn't it find you possible to reach me? contact me and we can also find an alternative of meeting. 
+						If you want to directly purchase a Sabriart Bijoux you can come to my stand in mine "mobile Tappe": (find them in the section <a href="{% url 'news-filter' 3 %}">"Events"</a> or follow the page Facebook).
+						If you have some difficulty to reach me, contact me and we can also find an alternative way to meet us.
                     
                     {% elif session_language = 'fra' %}
-						Si tu veux acheter un Sabriart Bijoux directement tu peux venir à mon stand dans mes "Étapes mobiles": tu leur trouves dans la section "Événements" ou tu peux suivre la page Facebook.<br>
-						Est-ce qu'il ne t'est pas possible m'atteindre? contacte-moi et nous pouvons trouver une alternative de rencontre aussi. 
+						Si tu veux acheter un Sabriart Bijoux directement tu peux venir à mon stand dans mes "Étapes mobiles": (tu leur trouves dans la section <a href="{% url 'news-filter' 3 %}">"Événements"</a>, òu suivre la page Facebook).
+						Si il tu as des difficultès à me rejouindre,  contacte-moi et nous pouvons trouver une alternative de rencontre aussi.
                     
                     {% elif session_language = 'esp' %}
-						Si quieres adquirir directamente un Sabriart Bijoux puedes venir a mi caseta en mis "Etapas móviles": las encuentras en la sección "Eventos" o bien puedes seguir la página Facebook.<br>
+						Si quieres adquirir directamente un Sabriart Bijoux puedes venir a mi caseta en mis "Etapas móviles": (las encuentras en la sección <a href="{% url 'news-filter' 3 %}">"Eventos"</a> o bien puedes seguir la página Facebook).<br>
 						¿No te es posible alcanzarme? contáctame y también podemos encontrar una alternativa de cita.
                     
                     {% else %}
-                        Se vuoi acquistare direttamente un Sabriart Bijoux puoi venire al mio stand nelle mie "Tappe mobili": le trovi nella sezione "Eventi" oppure puoi seguire la pagina Facebook.<br>
+                        Se vuoi acquistare direttamente un Sabriart Bijoux puoi venire al mio stand nelle mie "Tappe mobili": (le trovi nella sezione <a href="{% url 'news-filter' 3 %}">"Eventi"</a> oppure puoi seguire la pagina Facebook).<br>
                         Non ti è possibile raggiungermi? contattami e possiamo anche trovare un'alternativa di ritrovo. 
                     {% endif %}
                     <br>
@@ -185,16 +185,16 @@
 					<strong>
 					<span style="font-weight: bold">
 					{% if session_language = 'eng' %}
-                        Are you interested in Sabriart Bijoux to distribute the products? It sends an email of presentation of your shop to info@sabriartbijoux.it you will personally come ricontattato.
+                        f you are interested to distribute the collection "Sabriart Bijoux", send me an email of the presentation of your shop to <a href="mailtoinfo@sabriartbijoux.it">info@sabriartbijoux.it</a>, I will recontact you personally.
                     
                     {% elif session_language = 'fra' %}
-                        Est-ce que tu es intéressé au Sabriart Bijoux distribuer les produits? Il envoie un email de présentation de ton magasin a info@sabriartbijoux.it tu seras contacté de nouveau personnellement.
+                        Si vous êtes intéressès a distribuire les créations de la collection "Sabriart Bijoux". Envoyez moi une email de prèsentation de votre boutique à <a href="mailtoinfo@sabriartbijoux.it">info@sabriartbijoux.it</a>, je vous rèpondrai personnellement. 
                     
                     {% elif session_language = 'esp' %}
-                        ¿Eres interesado en Sabriart Bijoux distribuir los productos? Manda un email de presentación de tu tienda a info@sabriartbijoux.it vendrás personalmente ricontattato.
+                        ¿Eres interesado en Sabriart Bijoux distribuir los productos? Manda un email de presentación de tu tienda a <a href="mailtoinfo@sabriartbijoux.it">info@sabriartbijoux.it</a> vendrás personalmente ricontattato.
                     
                     {% else %}
-                        Sei interessato a distribuire i prodotti Sabriart Bijoux? Invia un'email di presentazione del tuo negozio a info@sabriartbijoux.it verrai ricontattato personalmente.
+                        Sei interessato a distribuire i prodotti Sabriart Bijoux? Invia un'email di presentazione del tuo negozio a <a href="mailto:info@sabriartbijoux.it">info@sabriartbijoux.it</a> verrai ricontattato personalmente.
                     {% endif %}
                 	</span>
 					</strong>

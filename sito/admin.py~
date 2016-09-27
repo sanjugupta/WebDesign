@@ -15,17 +15,8 @@ class ImmaginiAdmin(ImageCroppingMixin, admin.ModelAdmin):
 
 def get_category(self):
     return self.categoria.all()
-
 class PostAdmin(ImageCroppingMixin, admin.ModelAdmin):
-    #duplicate function
-    def duplicate_event(ModelAdmin, request, queryset):
-        for object in queryset:
-            object.id = None
-            object.save()
-    duplicate_event.short_description = "Duplica Record Selezionati"
-
     list_display = ("image_img", "titolo")
-    actions = ['duplicate_event']
 
 
 

@@ -62,6 +62,21 @@ def categorie(request):
 	return context
 
 
+def news(request):
+    tipologie_list = TipologiaEventi.objects.all()
+    news_list = News.objects.all().order_by('pub_date')
+    context = {'tipologie_list':tipologie_list,
+                'news_list':news_list}
+    return render_to_response('news.html', context, context_instance=RequestContext(request))
+
+def newsFilter(request, post_id):
+    tipologie_list = TipologiaEventi.objects.all()
+    news_list = News.objects.filter(categoria_id=post_id).order_by('pub_date')
+    categoria = TipologiaEventi.objects.get(id=post_id)
+    context = {'tipologie_list':tipologie_list,
+                'news_list':news_list,
+                'categoria':categoria}
+    return render_to_response('news.html', context, context_instance=RequestContext(request))
 
 
 ### EMAIL - CONTACT FORM
