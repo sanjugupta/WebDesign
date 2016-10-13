@@ -64,7 +64,7 @@ def categorie(request):
 
 def news(request):
     tipologie_list = TipologiaEventi.objects.all()
-    news_list = News.objects.all().order_by('pub_date')
+    news_list = News.objects.all().order_by('-pub_date')
     context = {'tipologie_list':tipologie_list,
                 'news_list':news_list}
     return render_to_response('news.html', context, context_instance=RequestContext(request))
