@@ -84,7 +84,7 @@ WSGI_APPLICATION = 'sabriart.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.mysql',
-        'NAME': 'sabriart',
+        'NAME': 'sabrinatrezzi',
         'USER': 'root',
         'PASSWORD': 'alnitek',
         'HOST': 'localhost',
@@ -137,13 +137,13 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-STATIC_ROOT = '/Users/pierangelo/Desktop/Django/sabriartbox/sabriart'
+STATIC_ROOT = '/Users/pierangelo/Desktop/Django/sabrinatrezzibox/sabriart'
 
 STATIC_URL = '/static/'
 
 STATICFILES_DIRS = [os.path.join(BASE_DIR, 'static')]
 
-MEDIA_ROOT = '/Users/pierangelo/Desktop/Django/sabriartbox/sabriart/media/'
+MEDIA_ROOT = '/Users/pierangelo/Desktop/Django/sabrinatrezzibox/sabriart/media/'
 
 MEDIA_URL = "http://127.0.0.1:8000/media/"
 
