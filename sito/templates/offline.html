@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<section id="service">
+
+	<div class="container">{% load staticfiles %}
+		<img src="{% static 'img/OFFLINE-slider.jpg' %}" class="img-responsive">
+	</div>
+
+
+<div class="container">
+	<div class="col-xs-12">
+			<p>
+				<br>
+				<br>
+				Per comunicazione offline s’intende tutto quel tipo di comunicazione che potremmo definire “tradizionale”. In altre parole è tutto ciò che fa conoscere la nostra azienda al di fuori del web e contribuisce a creare la nostra immagine.
+				<br>
+				Usufruire degli strumenti di comunicazione “tradizionale” in modo attento e sapiente è certamente un volano indispensabile all'affermazione e stabilizzazione della brand identity di un azienda. Il processo di integrazione delle due forme di comunicazione offline e online, genera valore e potenzia il messaggio.
+				<br>
+				Questa capacità di rafforzare la comunicazione online attraverso quella offline e viceversa, diviene un potente valore di crescita per il business.<br>
+				<br>
+				<br>
+			</p>
+	</div>
+</div>
+
+
+
+<div class="container">
+		<div class="row">
+			{% for ser in service_list %}
+				<div class="col-xs-12 col-sm-3" style="height: 710px;">
+					{% if ser.image %}
+					<img src="/media/{{ser.image}}" class="img-responsive">
+				{% endif %}
+					<h3>{{ser.titolo|safe}}</h3>
+					<p>{{ser.descrizione|safe}}</p>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+
+
+</service>
+
+
+
+{% endblock %}

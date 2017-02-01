@@ -15,8 +15,8 @@ from datetime import datetime
 
 def HomePage(request):
     post_list = Post.objects.all().order_by('-id')
-    slider_list = Post.objects.all().order_by('pub_date')
-    news_list = News.objects.all().order_by('-pub_date')[:3]
+    slider_list = Slider.objects.all().order_by('pub_date')
+    news_list = News.objects.all().order_by('-pub_date')[:4]
     box_list = Box.objects.all()
     gioielli = Page.objects.get(id=1)
     biografia = Page.objects.get(id=2)
@@ -34,7 +34,7 @@ def HomePage(request):
 
 def ProductView(request):
     post_list = Post.objects.all().order_by('-id')
-    categorie_list = Categorie.objects.all()
+    categorie_list = Categorie.objects.all().order_by('ordine')
     context = {'post_list':post_list,
                 'categorie_list':categorie_list}
     return render_to_response('prodotti.html', context, context_instance=RequestContext(request))
@@ -51,13 +51,15 @@ def ProductFilterView(request, post_id):
 def DetailView(request, post_id):
     post = Post.objects.get(pk=post_id)
     filer_list = Image.objects.filter(folder_id = post.album)
+    post_list = Post.objects.exclude(chiave__isnull=True).filter(chiave=post.chiave).exclude(id=post.id).order_by('-id')
     context = {'post': post,
-    			'filer_list':filer_list}
+    			'filer_list':filer_list,
+                'post_list':post_list}
     return render_to_response('dettaglio.html', context, context_instance=RequestContext(request))
 
 
 def categorie(request):
-	categorie_list = Categorie.objects.all()
+	categorie_list = Categorie.objects.all().order_by('ordine')
 	context = {'categorie_list':categorie_list}
 	return context
 
@@ -109,7 +111,7 @@ def shop(request):
     if request.method == 'POST': # If the form has been submitted...
         form = ContactForm(request.POST) # A form bound to the POST data
         if form.is_valid(): # All validation rules pass
-            subject = 'MESSAGGIO DAL SITO SABRIART BIJOUX'
+            subject = 'MESSAGGIO DAL SITO SABRINATREZZI.com'
             #message = form.cleaned_data['messaggio']
             message = render_to_string('contact.txt', {'post': request.POST})
             sender = form.cleaned_data['email']
@@ -129,9 +131,27 @@ def shop(request):
 
 
 
-
 def success(request):
     return render_to_response('success.html', context_instance=RequestContext(request))
+
+
+def ServiceOffline(request):
+    service_list = Servizi.objects.filter(offline=True)
+    context = {'service_list':service_list}
+    return render_to_response('offline.html', context, context_instance=RequestContext(request))
+
+
+def ServiceOnline(request):
+    service_list = Servizi.objects.filter(online=True)
+    context = {'service_list':service_list}
+    return render_to_response('online.html', context, context_instance=RequestContext(request))
+
+
+def ServiceIntegrata(request):
+    service_list = Servizi.objects.filter(integrata=True)
+    context = {'service_list':service_list}
+    return render_to_response('integrata.html', context, context_instance=RequestContext(request))
+
 
 
 ### setting language session

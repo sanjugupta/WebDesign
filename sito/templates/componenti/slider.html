@@ -4,12 +4,10 @@
             <ul>
             {% for slider in slider_list %}
               <!-- SLIDE  -->
-              {% if slider.slider_home %}
               <li data-transition="fade" data-slotamount="5" data-masterspeed="700" >
                 <!-- MAIN IMAGE -->
-                <img src="/media/{{slider.slider_home}}" alt="gallery 1"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
+                <img src="/media/{{slider.image}}" alt="gallery 1"  data-bgfit="cover" data-bgposition="center center" data-bgrepeat="no-repeat">
               </li>
-              {% endif %}
 			       {% endfor %}
             </ul>
 

@@ -44,6 +44,9 @@
                 {% else %}
                     Categoria: {{post.categoria.titolo}}
                 {% endif %}
+                <br>
+                <br>
+                Cliente: {{post.cliente.titolo}}
             </h4>
 
             <hr>
@@ -57,6 +60,9 @@
                 {% else %}
                     {{post.body|safe}}
                 {% endif %}
+            </p>
+            <p>
+
             </p>
 
             <h4><br><br>
@@ -87,6 +93,101 @@
     </script>
 
 </section>
+{% if post_list.count > 0 %}
+<section id="relazioni">
+    <div class="container" style="margin-bottom:30px;">
+        <h4>GRAFICA COORDINATA</h4>
+    
+    {% if session_language = 'eng' %}
+        <div id="gallery-list" style="display:none;">
+        {% for post in post_list %}
+        {% if post.image %}
+        <a href="{% url 'dettaglio' post.id %}">{% load cropping %}
+        <img alt="<h2>{{post.titolo_uk}}</h2><br><h3>{{post.categoria.titolo_uk}}</h3>"
+             src="{% cropped_thumbnail post "croplibero" %}"
+             data-image="{% cropped_thumbnail post "croplibero" %}"
+             data-description="{{post.titolo_uk}} | {{post.categoria.titolo_uk}}"
+             style="display:none">
+        </a>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+
+    {% elif session_language = 'fra' %}
+        <div id="gallery-list" style="display:none;">
+        {% for post in post_list %}
+        {% if post.image %}
+        <a href="{% url 'dettaglio' post.id %}">{% load cropping %}
+        <img alt="<h2>{{post.titolo_fra}}</h2><br><h3>{{post.categoria.titolo_fra}}</h3>"
+             src="{% cropped_thumbnail post "croplibero" %}"
+             data-image="{% cropped_thumbnail post "croplibero" %}"
+             data-description="{{post.titolo_fra}} | {{post.categoria.titolo_fra}}"
+             style="display:none">
+        </a>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+
+    {% elif session_language = 'esp' %}
+        <div id="gallery-list" style="display:none;">
+        {% for post in post_list %}
+        {% if post.image %}
+        <a href="{% url 'dettaglio' post.id %}">{% load cropping %}
+        <img alt="<h2>{{post.titolo_esp}}</h2><br><h3>{{post.categoria.titolo_esp}}</h3>"
+             src="{% cropped_thumbnail post "croplibero" %}"
+             data-image="{% cropped_thumbnail post "croplibero" %}"
+             data-description="{{post.titolo_esp}} | {{post.categoria.titolo_esp}}"
+             style="display:none">
+        </a>
+        {% endif %}
+        {% endfor %}
+    </div>
+
+    {% else %}
+        <div id="gallery-list" style="display:none;">
+        {% for post in post_list %}
+        {% if post.image %}
+        <a href="{% url 'dettaglio' post.id %}">{% load cropping %}
+        <img alt="<h2>{{post.titolo}}</h2><br><h3>{{post.cliente}}</h3><H4>{{post.categoria.titolo}}</h4>"
+             src="{% cropped_thumbnail post "croplibero" %}"
+             data-image="{% cropped_thumbnail post "croplibero" %}"
+             data-description="{{post.titolo}} | {{post.categoria.titolo}}"
+             style="display:none">
+        </a>
+        {% endif %}
+        {% endfor %}
+    </div>
+    {% endif %}
+
+    </div><!-- container -->
+     <script type="text/javascript">
+    
+            jQuery(document).ready(function(){
+    
+                jQuery("#gallery-list").unitegallery({
+                    tiles_type:"nested",
+                    tiles_nested_optimal_tile_width:300,
+                    tile_border_color:"#7a7a7a",
+                    tile_outline_color:"#8B8B8B",
+                    tile_enable_shadow:false,
+                    tile_shadow_color:"#8B8B8B",
+                    tile_overlay_opacity:0.3,
+                    tile_show_link_icon:true,
+                    tile_image_effect_type:"sepia",
+                    tile_image_effect_reverse:true,
+                    tile_enable_textpanel:true,
+                    lightbox_textpanel_title_color:"e5e5e5",
+                    tile_as_link:true,
+                    //tiles_type: "justified"
+                });
+    
+            });
+            
+        </script>
+</div>
+{% endif %}
 
 
 {% endblock %}

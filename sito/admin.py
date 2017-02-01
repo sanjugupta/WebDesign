@@ -38,6 +38,9 @@ admin.site.register(News, MyModelAdmin)
 admin.site.register(Slider, ImmaginiAdmin)
 admin.site.register(Page, MyModelAdmin)
 admin.site.register(TipologiaEventi, MyModelAdmin)
+admin.site.register(Cliente, MyModelAdmin)
+admin.site.register(Servizi, MyModelAdmin)
+
 
 
 

@@ -4,10 +4,10 @@
 {% block content %}
 
 <div class="container" style="margin-top: 60px">
-    <div class="col-xs-12 col-sm-4" style="margin-top:15px;">
+    <div class="col-xs-12 col-sm-12" style="margin-top:15px;">
         <h1 style="font-size:14pt;">PORTFOLIO</h1>
     </div>
-    <div id="menu-categorie" class="col-xs-12 col-sm-8" style="margin-bottom:15px;">
+    <div id="menu-categorie" class="col-xs-12 col-sm-12" style="margin-bottom:15px;">
         <ul>
             {% for cat in categorie_list %}
             <li>
@@ -29,7 +29,7 @@
     </div>
 </div>
 
-<div class="container" style="margin-top:15px; margin-bottom:100px;">
+<div class="container-fluid" style="margin-top:15px; margin-bottom:100px;">
 
     {% if session_language = 'eng' %}
         <div id="gallery-list" style="display:none;">
@@ -83,7 +83,7 @@
         {% for post in post_list %}
         {% if post.image %}
         <a href="{% url 'dettaglio' post.id %}">{% load cropping %}
-        <img alt="<h2>{{post.titolo}}</h2><br><h3>{{post.categoria.titolo}}</h3>"
+        <img alt="<h2>{{post.titolo}}</h2><br><h3>{{post.cliente}}</h3><H4>{{post.categoria.titolo}}</h4>"
              src="{% cropped_thumbnail post "croplibero" %}"
              data-image="{% cropped_thumbnail post "croplibero" %}"
              data-description="{{post.titolo}} | {{post.categoria.titolo}}"
@@ -97,11 +97,11 @@
 
 
 
-    <div id="gallery-list" style="display:none;">
+    <div id="gallery1" style="display:none;">
         {% for post in post_list %}
         {% if post.image %}
         <a href="{% url 'dettaglio' post.id %}">{% load cropping %}
-        <img alt="<h2>{{post.titolo}}</h2><br><h3>{{post.categoria.titolo}}</h3>"
+        <img alt="<h2>{{post.titolo}}</h2><br><h3>{{post.cliente}}</h4><br>{{post.categoria.titolo}}</h3>"
              src="{% cropped_thumbnail post "croplibero" %}"
              data-image="{% cropped_thumbnail post "croplibero" %}"
              data-description="{{post.titolo}} | {{post.categoria.titolo}}"
@@ -117,9 +117,9 @@
     
             jQuery(document).ready(function(){
     
-                jQuery("#gallery-list").unitegallery({
+                jQuery("#gallery1").unitegallery({
                     tiles_type:"nested",
-                    tiles_nested_optimal_tile_width:350,
+                    tiles_nested_optimal_tile_width:300,
                     tile_border_color:"#7a7a7a",
                     tile_outline_color:"#8B8B8B",
                     tile_enable_shadow:false,
@@ -130,12 +130,13 @@
                     tile_image_effect_reverse:true,
                     tile_enable_textpanel:true,
                     lightbox_textpanel_title_color:"e5e5e5",
+                    tile_as_link:true,
+                    //tiles_type: "justified"
                 });
     
             });
             
         </script>
-
 
 </div>
 			

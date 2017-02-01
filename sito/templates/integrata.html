@@ -1,0 +1,47 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<section id="service">
+
+<div class="container">{% load staticfiles %}
+	<img src="{% static 'img/INTEGRATA-slider.jpg' %}" class="img-responsive">
+</div>
+
+<div class="container">
+	<div class="col-xs-12">
+			<p>
+				<br>
+				<br>
+				Alla base di un buon messaggio promozionale c’è una buona strategia di comunicazione integrata, ovvero un piano di promozione ben studiato che coinvolga più canali contemporaneamente. Quindi alla domanda "è meglio la comunicazione offline o online", la risposta è semplice: tutte e due. <br>
+				Fossilizzarsi su campagne di marketing tradizionali è anacronistico e incentrare la propria strategia esclusivamente online potrebbe non portare i risultati attesi. Solo così si riuscirà ad attirare l’attenzione dei potenziali clienti!<br>
+				Una strategia di comunicazione integrata è composta da più elementi che devono essere strettamente in sintonia tra loro e indirizzati verso un comune obiettivo. Le tecniche fai da te, spesso producono più danni che effetti benefici. <br>
+				Ecco perché l’aiuto di un esperto può fare la differenza!<br>
+				<br>
+				<br>
+			</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			{% for ser in service_list %}
+				<div class="col-xs-12 col-sm-3" style="height: 710px;">
+					{% if ser.image %}
+					<img src="/media/{{ser.image}}" class="img-responsive">
+				{% endif %}
+					<h3>{{ser.titolo|safe}}</h3>
+					<p>{{ser.descrizione|safe}}</p>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+
+</section>
+
+
+
+
+
+{% endblock %}

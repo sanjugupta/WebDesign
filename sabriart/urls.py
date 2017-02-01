@@ -31,6 +31,9 @@ urlpatterns = [
     url(r'^shop/$', views.shop, name='shop'),
     url(r'^detail/(?P<post_id>\d+)/$', views.DetailView, name='dettaglio'),
     url(r'^success/$', views.success, name='success'),
+    url(r'^offline/$', views.ServiceOffline, name='offline'),
+    url(r'^online/$', views.ServiceOnline, name='online'),
+    url(r'^integrata/$', views.ServiceIntegrata, name='integrata'),
     url(r'^language/(?P<language>[a-z\-]+)/$', views.language),
 
 ]

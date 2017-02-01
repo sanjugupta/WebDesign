@@ -1,0 +1,43 @@
+{% extends 'base.html' %}
+
+
+{% block content %}
+
+<section id="service">
+
+	<div class="container">{% load staticfiles %}
+		<img src="{% static 'img/ONLINE-slider.jpg' %}" class="img-responsive">
+	</div>
+
+	<div class="container">
+		<div class="col-xs-12">
+				<p>
+					<br>
+					<br>
+					Nella maggioranza dei casi la comunicazione online non va a sostituire quella offline; la prima è utilizzata infatti ad integrazione della seconda, per colpire specifici target e per raggiungere obiettivi di marketing delimitati, sfruttando la possibilità di effettuare strategie pubblicitarie trasversali tra mezzi differenti. <br>
+					Molte volte tuttavia tendiamo a focalizzare l’attenzione solo su alcuni strumenti, tralasciando il fatto che l’intera comunicazione aziendale ha l’effetto di generare traffico verso il sito dell’azienda, il vero fulcro dell’attività online.
+					<br>
+					<br>
+					<br>
+				</p>
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			{% for ser in service_list %}
+				<div class="col-xs-12 col-sm-3" style="min-height: 710px;">
+					{% if ser.image %}
+					<img src="/media/{{ser.image}}" class="img-responsive">
+				{% endif %}
+					<h3>{{ser.titolo|safe}}</h3>
+					<p>{{ser.descrizione|safe}}</p>
+				</div>
+			{% endfor %}
+		</div>
+	</div>
+
+</section>
+
+
+{% endblock %}

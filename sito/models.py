@@ -21,12 +21,24 @@ class Categorie(models.Model):
     titolo_fra = models.CharField(max_length=100, verbose_name="Titolo Francese:", null=True, blank=True)
     titolo_esp = models.CharField(max_length=100, verbose_name="Titolo Spagna:", null=True, blank=True)
     sottotitolo = models.CharField(max_length=250, null=True, blank=True)
+    ordine = models.IntegerField(blank=True, null=True, verbose_name="Ordine")
 
     def __unicode__(self):
         return self.titolo
 
     class Meta:
         verbose_name_plural = "Categorie"
+
+
+
+class Cliente(models.Model):
+    titolo = models.CharField(max_length=100)
+
+    def __unicode__(self):
+        return self.titolo
+
+    class Meta:
+        verbose_name_plural = "Cliente"
 
 
 
@@ -152,6 +164,8 @@ FORMATI = (
 
 class Post(models.Model):
     categoria = models.ForeignKey(Categorie, null=True, blank=True)
+    cliente = models.ForeignKey(Cliente, null=True, blank=True)
+    chiave = models.CharField(max_length=100, verbose_name="Tag Comune:", null=True, blank=True)
     titolo = models.CharField("Titolo:", max_length=100, null=True, blank=True)
     titolo_uk = models.CharField(max_length=100, verbose_name="Titolo Inglese:", null=True, blank=True)
     titolo_fra = models.CharField(max_length=100, verbose_name="Titolo Francese:", null=True, blank=True)
@@ -182,6 +196,10 @@ class Post(models.Model):
     album = FilerFolderField(null=True, blank=True)
     video = models.ManyToManyField(Video, null=True, blank=True)
     galleria = models.ManyToManyField(Immagini, null=True, blank=True, verbose_name="Seleziona Immagini Galleria")
+    brand_identity = models.BooleanField('brand identity ', 
+                                    default=False)
+    corporate_identity = models.BooleanField('corporate identity', 
+                                    default=False)
     pub_date = models.DateTimeField('date published')
 
     def image_img(self):
@@ -288,6 +306,28 @@ class News(models.Model):
         verbose_name_plural = "News"
         ordering = ['id']
 
+
+
+
+class Servizi(models.Model):
+    titolo = models.CharField(max_length=100, verbose_name="Titolo:")
+    image = models.ImageField(blank=True, null=True, upload_to='slider')
+    thumb = ImageRatioField('image', '600x449', verbose_name="Miniatura")
+    thumbdue = ImageRatioField('image', '745x558', verbose_name="Miniatura pagina dettaglio")
+    croplibero = ImageRatioField('image', '595x335', free_crop=True, verbose_name="Ritaglio Libero")
+    descrizione = models.TextField(null=True, blank=True, verbose_name="Descrizione")
+    pub_date = models.DateTimeField('date published')
+    offline = models.BooleanField('offline', default=False)
+    online = models.BooleanField('online', default=False)
+    integrata = models.BooleanField('integrata', default=False)
+    active = models.BooleanField('attiva', default=False)
+
+    def __unicode__(self):
+        return self.titolo
+
+    class Meta:
+        verbose_name_plural = "Servizi"
+        ordering = ['id']
 
 
 

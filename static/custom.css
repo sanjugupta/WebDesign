@@ -16,7 +16,8 @@ a:focus {
 
 
 .logo {
-	margin-top:-40px;
+	margin-top:0px;
+  width: 250px;
 }
 
 .navbar-default {
@@ -55,9 +56,10 @@ a:focus {
 
 
 #quadrati {
-	margin-top:50px;
+	margin-top:10px;
   margin-bottom:0px;
-	background-color: #745DA3;
+	/*background-color: #745DA3;*/
+  background-color: #ffffff;
 	padding-top:30px;
 	padding-bottom:30px;
 }
@@ -138,6 +140,7 @@ a:focus {
 #slogan {
 	background-color: #745DA3;
 	color: #ffffff;
+  padding-bottom: 20px;
 }
 
 #slogan h1 {
@@ -447,17 +450,21 @@ footer {
 }
 
 #menu-categorie ul {
-  margin-top: 30px;
+  margin-top: 0px;
 }
 
 #menu-categorie ul li {
   display: inline-block;
   padding-left: 10px;
   padding-right: 10px;
-  float: right;
+  float: left;
   border-left-width: 1px;
   border-left-color: #23527c;
   border-left-style: solid;
+}
+
+#menu-categorie ul li a {
+  font-size: 9pt;
 }
 
 
@@ -497,15 +504,25 @@ footer p {
 .ug-textpanel-title h2 {
   text-transform: uppercase;
   font-weight: 200;
-  font-size:17pt;
+  font-size:15pt;
   padding-bottom:0px;
   margin-bottom: 0px;
+  font-family: 'Ubuntu', sans-serif;
 }
 .ug-textpanel-title h3 {
   font-weight: 200;
-  font-size:15pt;
+  font-size:12pt;
   margin-top:0px;
   padding-top:0px;
+  font-family: 'Ubuntu', sans-serif;
+}
+
+.ug-textpanel-title h4 {
+  font-weight: 200;
+  font-size:9pt;
+  margin-top:0px;
+  padding-top:0px;
+  font-family: 'Ubuntu', sans-serif;
 }
 
 
@@ -521,7 +538,7 @@ footer p {
   float: left;
   width: 36px;
   height: 36px;
-  border: 2px solid #ffffff;
+  border: 0px solid #ffffff;
   border-radius: 100%;
   margin-right: 7px; /*space between*/
     display: flex;
@@ -530,7 +547,7 @@ footer p {
     -webkit-transition: all 0.4s;
 } 
 .social-links a i{
-  font-size: 20px;
+  font-size: 30px;
     align-self:center;
   color: #ffffff;
     transition: all 0.4s;
@@ -552,4 +569,16 @@ footer p {
 .parallax-window {
     min-height: 400px;
     background: transparent;
+}
+
+
+#service {
+  margin-top: 30px;
+}
+
+#service p {
+  font-weight: 200;
+    font-size: 10pt;
+    -webkit-font-smoothing: antialiased;
+    text-shadow: none;
 }
