@@ -41,10 +41,16 @@ def ProductView(request):
 
 
 def ProductFilterView(request, post_id):
+    cate = Categorie.objects.get(pk=post_id)
     post_list = Post.objects.filter(categoria_id = post_id).order_by('-id')
+    post_brand = Post.objects.filter(brand_identity=True).order_by('-id')
+    post_corporate = Post.objects.filter(corporate_identity=True).order_by('-id')
     categorie_list = Categorie.objects.all()
     context = {'post_list':post_list,
-                'categorie_list':categorie_list}
+                'categorie_list':categorie_list,
+                'post_brand':post_brand,
+                'post_corporate':post_corporate,
+                'cate':cate}
     return render_to_response('prodotti.html', context, context_instance=RequestContext(request))
 
 
