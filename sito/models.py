@@ -200,6 +200,8 @@ class Post(models.Model):
                                     default=False)
     corporate_identity = models.BooleanField('corporate identity', 
                                     default=False)
+    system_identity = models.BooleanField('system identity', 
+                                    default=False)
     pub_date = models.DateTimeField('date published')
 
     def image_img(self):
