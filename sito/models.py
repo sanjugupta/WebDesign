@@ -171,6 +171,7 @@ class Post(models.Model):
     titolo_fra = models.CharField(max_length=100, verbose_name="Titolo Francese:", null=True, blank=True)
     titolo_esp = models.CharField(max_length=100, verbose_name="Titolo Spagna:", null=True, blank=True)
     titolomenu = models.CharField("Titolo Menu:", max_length=100, null=True, blank=True)
+    link = models.CharField("Link:", max_length=100, null=True, blank=True)
     revhome = models.BooleanField('Home Gallery', 
                                     default=False, 
                                     help_text="Mostra IMG nella slide in home")

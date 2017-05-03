@@ -47,6 +47,14 @@
                 <br>
                 <br>
                 Cliente: {{post.cliente.titolo}}
+                <br>
+                <br>
+                 {% if post.link %}
+                 Web: 
+                 <a href="{{post.link}}" target="_blank">{{ post.link }}</a>
+                 <br>
+                 <br>
+                {% endif %}
             </h4>
 
             <hr>
